@@ -192,8 +192,8 @@
                     </div>
 
 
-                    <button type="submit" class="btn btn-success w-100 p-3 rounded-pill text-center"
-                        style="margin-top: 20px;" data-toggle="modal" data-target="#exampleModal">Submit</button>
+                    <button type="button" class="btn btn-success w-100 p-3 rounded-pill text-center"
+                        style="margin-top: 20px;" data-toggle="modal" data-target="#exampleModal" onClick="Result()">Submit</button>
 
 
                 </div>
@@ -339,12 +339,9 @@
 
 
     <script>
-   
-   
-document.getElementById('contactForm').addEventListener('submit', Result);
 
-function Result(e) {
-    e.preventDefault();
+function Result() {
+    event.preventDefault();
 
     var naksh1 = "null";
     var naksh2 = "null";
