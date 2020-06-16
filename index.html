@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-   
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -47,9 +47,15 @@
                         Other Services
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="https://keerlokesh.github.io/FriendshipBuzz.github.io/Love_cal.html">Love Calculator</a>
-                        <a class="dropdown-item" href="https://keerlokesh.github.io/FriendshipBuzz.github.io/Name_matcher.html">Name Matcher </a>
-                        <a class="dropdown-item" href="https://keerlokesh.github.io/FriendshipBuzz.github.io/Birth_Gift_card.html">Birthday Gift Card</a>
+                        <a class="dropdown-item"
+                            href="https://keerlokesh.github.io/FriendshipBuzz.github.io/Love_cal.html">Love
+                            Calculator</a>
+                        <a class="dropdown-item"
+                            href="https://keerlokesh.github.io/FriendshipBuzz.github.io/Name_matcher.html">Name Matcher
+                        </a>
+                        <a class="dropdown-item"
+                            href="https://keerlokesh.github.io/FriendshipBuzz.github.io/Birth_Gift_card.html">Birthday
+                            Gift Card</a>
                     </div>
                 </li>
             </ul>
@@ -140,7 +146,7 @@
 
     <div id="finder" class="container bg-info mx-auto rounded-lg">
 
-        <form id="contactForm">
+        <form>
 
             <div class="container mx-auto">
                 <div class="row justify-content-md-center">
@@ -193,7 +199,8 @@
 
 
                     <button type="button" class="btn btn-success w-100 p-3 rounded-pill text-center"
-                        style="margin-top: 20px;" data-toggle="modal" data-target="#exampleModal" onclick="Result()">Submit</button>
+                        style="margin-top: 20px;" data-toggle="modal" data-target="#exampleModal"
+                        onclick="Result()">Submit</button>
 
 
                 </div>
@@ -235,11 +242,11 @@
                         </li>
                         <li class="list-inline-item">
                             <a class="btn btn-outline-primary btn-sm">
-                                <img src="Images/twitter_logo.png" alt="..."> 
+                                <img src="Images/twitter_logo.png" alt="...">
                             </a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="btn btn-outline-primary btn-sm" >
+                            <a class="btn btn-outline-primary btn-sm">
                                 <img src="Images/linkedin_logo.png" alt="...">
                             </a>
                         </li>
@@ -314,7 +321,7 @@
                                     <h3 id="fgirl_naksh"></h3>
                                 </td>
                             </tr>
-                            
+
                             <tr>
                                 <td>
                                     <h2>Total Gun</h2>
@@ -340,893 +347,893 @@
 
     <script>
 
-function Result() {
-    event.preventDefault();
-
-    var naksh1 = "null";
-    var naksh2 = "null";
-    var boy = document.querySelector('#boy1').value;
-    var girl = document.querySelector('#girl1').value;
-    var boy_char = boy[0] + boy[1] + boy[2];
-    var girl_char = girl[0] + girl[1] + girl[2];
-    let total1 = [''];
-    let total2 = [''];
-    total1 = toString(boy);
-    total2 = toString(girl);
-
-   if(boy.length < 1){
-    alert('Please Fill Boy Name');
-      return;
-   }
-   else if(girl.length < 1)
-           {
-     alert('Please Fill Girl Name');
-       return;
-           }
-   else
-   {
-    var result1 = cal(naksh1, boy, boy_char);
-    total1 = result1;
-    var result2 = cal(naksh2, girl, girl_char);
-    total2 = result2;
-    
-
-    var r11 = toString(result1[0]), r12 = toString(result1[1]);
-    var r21 = toString(result2[0]), r22 = toString(result2[1]);
-    var gun = Gun(result1[1], result2[1]);
-    document.getElementById('fboy').innerHTML = boy;
-    document.getElementById('fboy_rashi').innerHTML = total1[0];
-    document.getElementById('fboy_naksh').innerHTML = total1[1];
-
-    document.getElementById('fgirl').innerHTML = girl;
-    document.getElementById('fgirl_rashi').innerHTML = total2[0];
-    document.getElementById('fgirl_naksh').innerHTML = total2[1];
-    document.getElementById('Rslt').innerHTML = gun;
-   }
-   
-
-}
 
 
 
-function cal(naksh1, boy, boy_char) {
-    let tot = ['', ''];
-    var rashi = '';
-    if ((boy_char[0] == 'c' || boy_char[0] == 'C') && (boy_char[1] == 'h' || boy_char[1] == 'H')) {
-        if ((boy_char[2] == 'e' || boy_char[2] == 'E') && (boy[3] == 'e' || boy[3] == 'E')) {
-            naksh1 = "revti";
-            rashi = 'meen';
-        }
-        else if ((boy_char[2] == 'e' || boy_char[2] == 'E') || (boy_char[2] == 'o' || boy_char[2] == 'O') ||
-            (boy_char[2] == 'u' || boy_char[2] == 'U')) {
-            naksh1 = "asv";
-            rashi = 'mesh';
+        function Result() {
+            event.preventDefault();
 
-        }
-        else if ((boy_char[2] == 'a' || boy_char[2] == 'A') || (boy_char[2] == 'I' || boy_char[2] == 'i')) {
-            naksh1 = "revti";
-            rashi = 'meen';
-        }
-
-    }
-    else if ((boy_char[0] == 'c' || boy_char[0] == 'C') && (boy_char[1] == 'h' || boy_char[1] == 'H')) {
-        if ((boy_char[2] == 'r' || boy_char[2] == 'R')) {
-            naksh1 = "revti";
-            rashi = 'meen';
-        }
-    else if ((boy_char[0] == 'b' || boy_char[0] == 'B') && (boy_char[1] == 'h' || boy_char[1] == 'H')) {
-        if ((boy_char[2] == 'a' || boy_char[2] == 'A')) {
-            naksh1 = "mool";
-            rashi = 'Dhanu';
-        }
-        else if ((boy_char[2] == 'e' || boy_char[2] == 'E') && (boy[3] == 'e' || boy[3] == 'E')) {
-            naksh1 = "mool";
-            rashi = 'Dhanu';
-        }
-        else if ((boy_char[2] == 'e' || boy_char[2] == 'E')) {
-            naksh1 = "usha1";
-            rashi = 'Dhanu';
-        }
-        else if ((boy_char[2] == 'i' || boy_char[2] == 'I')) {
-            naksh1 = "mool";
-            rashi = 'Dhanu';
-        }
-        else if ((boy_char[2] == 'u' || boy_char[2] == 'U')) {
-            naksh1 = "poosha";
-            rashi = 'Dhanu';
-        }
-        else if ((boy_char[2] == 'o' || boy_char[2] == 'O') && (boy[3] == 'O' || boy[3] == 'o')) {
-            naksh1 = "poosha";
-            rashi = 'Dhanu';
-        }
-        else if ((boy_char[2] == 'o' || boy_char[2] == 'O')) {
-            naksh1 = "usha1";
-            rashi = 'Dhanu';
-        }
-        else {
-            naksh1 = "mool";
-            rashi = 'Dhanu';
-        }
-        
-
-
-    }
-
-    else if ((boy_char[0] == 'T' || boy_char[0] == 't') && (boy_char[1] == 'r' || boy_char[1] == 'R')) {
-        naksh1 = "ubha";
-        rashi = 'Meen';
-    }
-
-    else if ((boy_char[0] == 'D' || boy_char[0] == 'd') && (boy_char[1] == 'h' || boy_char[1] == 'H')) {
-        naksh1 = "poosha";
-        rashi = 'Dhanu';
-    }
-    else if ((boy_char[0] == 'c' || boy_char[0] == 'C') && (boy_char[1] == 'h' || boy_char[1] == 'H') && (boy_char[2] == 'h' || boy_char[2] == 'H')) {
-        naksh1 = "adra";
-        rashi = 'Mithun';
-    }
-    else if ((boy_char[0] == 'j' || boy_char[0] == 'J') && (boy_char[1] == 'h' || boy_char[1] == 'H')) {
-        naksh1 = "ubha";
-        rashi = 'Meen';
-    }
-
-    else if ((boy_char[0] == 't' || boy_char[0] == 'T') && (boy_char[1] == 'h' || boy_char[1] == 'H') && (boy_char[2] == 'h' || boy_char[2] == 'H')) {
-        naksh1 = "hast";
-        rashi = 'Kanya';
-    }
-    else if ((boy_char[0] == 't' || boy_char[0] == 'T') && (boy_char[1] == 'h' || boy_char[1] == 'H')) {
-        naksh1 = "ubha";
-        rashi = 'Meen';
-    }
-
-    else if ((boy_char[0] == 'l' || boy_char[0] == 'L')) {
-        if ((boy_char[1] == 'a' || boy_char[1] == 'A')) {
-            naksh1 = "asv";
-            rashi = 'Mesh';
-        }
-        else if ((boy_char[1] == 'e' || boy_char[1] == 'E') && (boy[2] == 'e' || boy[2] == 'E')) {
-            naksh1 = "bhardi";
-            rashi = 'Mesh';
-        }
-        else if ((boy_char[11] == 'e' || boy_char[1] == 'E')) {
-            naksh1 = "bhardi";
-            rashi = 'Mesh';
-        }
-        else if ((boy_char[1] == 'o' || boy_char[1] == 'O')) {
-            naksh1 = "bhardi";
-            rashi = 'Mesh';
-        }
-        else if ((boy_char[1] == 'i' || boy_char[1] == 'I')) {
-            naksh1 = "bhardi";
-            rashi = 'Mesh';
-        }
-        else if ((boy_char[1] == 'u' || boy_char[1] == 'U')) {
-            naksh1 = "bhardi";
-            rashi = 'Mesh';
-        
-        }
-        else 
-        {
-            naksh1 = "asv";
-            rashi = 'Mesh';
-        }
-
-    }
-    else if ((boy_char[0] == 'b' || boy_char[0] == 'B') || (boy_char[0] == 'v' || boy_char[0] == 'V')) {
-        if ((boy_char[1] == 'a' || boy_char[1] == 'A')) {
-            naksh1 = "rohdi";
-            rashi = 'Vrash';
-        }
-        else if ((boy_char[1] == 'e' || boy_char[1] == 'E') && (boy[2] == 'e' || boy[2] == 'E')) {
-            naksh1 = "rohdi";
-            rashi = 'Vrash';
-        }
-        else if ((boy_char[1] == 'e' || boy_char[1] == 'E')) {
-            naksh1 = "mrug1";
-            rashi = 'Vrash';
-        }
-        else if ((boy_char[1] == 'o' || boy_char[1] == 'O') && (boy[2] == 'o' || boy[2] == 'O')) {
-            naksh1 = "rohdi";
-            rashi = 'Vrash';
-        }
-        else if ((boy_char[1] == 'o' || boy_char[1] == 'O')) {
-            naksh1 = "mrug1";
-            rashi = 'Vrash';
-        }
-        else if ((boy_char[1] == 'i' || boy_char[1] == 'I')) {
-            naksh1 = "rohdi";
-            rashi = 'Vrash';
-        }
-        else if ((boy_char[1] == 'u' || boy_char[1] == 'U')) {
-            naksh1 = "bhardi";
-            rashi = 'Mesh';
-        }
-        else{
-            naksh1 = "rohdi";
-            rashi = 'Vrash';
-        }
-
-    }
-    else if ((boy_char[0] == 'o' || boy_char[0] == 'O')) {
-        naksh1 = "rohdi";
-        rashi = 'Vrash';
-    }
-    else if ((boy_char[0] == 'a' || boy_char[0] == 'A')) {
-        naksh1 = "kratika1";
-        rashi = 'Mesh';
-    }
-    else if ((boy_char[0] == 'i' || boy_char[0] == 'I')) {
-        naksh1 = "kratika1";
-        rashi = 'Mesh';
-    }
-    else if ((boy_char[0] == 'o' || boy_char[0] == 'O') && (boy_char[1] == 'o' || boy_char[1] == 'O')) {
-        naksh1 = "kratika2";
-        rashi = 'Vrash';
-    }
-    else if ((boy_char[0] == 'u' || boy_char[0] == 'U')) {
-        naksh1 = "kratika2";
-        rashi = 'Vrash';
-    }
-    else if ((boy_char[0] == 'e' || boy_char[0] == 'E')) {
-        naksh1 = "kratika2";
-        rashi = 'Vrash';
-    }
-    else if ((boy_char[0] == 'K' || boy_char[0] == 'k') && (boy_char[1] == 'h' || boy_char[1] == 'H')) {
-        if ((boy_char[2] == 'i' || boy_char[2] == 'I')) {
-            naksh1 = "sravan";
-            rashi = 'Makar';
-        }
-        else if ((boy_char[2] == 'e' || boy_char[2] == 'E') && (boy[3] == 'e' || boy[3] == 'E')) {
-            naksh1 = "sravan";
-            rashi = 'Makar';
-        }
-        else if ((boy_char[2] == 'e' || boy_char[2] == 'E')) {
-            naksh1 = "sravan";
-            rashi = 'Makar';
-        }
-        else if ((boy_char[2] == 'u' || boy_char[2] == 'U')) {
-            naksh1 = "sravan";
-            rashi = 'Makar';
-        }
-        else if ((boy_char[2] == 'o' || boy_char[2] == 'O') && (boy_char[3] == 'O' || boy_char[3] == 'o')) {
-            naksh1 = "sravan";
-            rashi = 'Makar';
-        }
-        else if ((boy_char[2] == 'o' || boy_char[2] == 'O')) {
-            naksh1 = "sravan";
-            rashi = 'Makar';
-        }
-    }
-    else if ((boy_char[0] == 'c' || boy_char[0] == 'C') || (boy_char[0] == 'k' || boy_char[0] == 'K')) {
-        if ((boy_char[1] == 'a' || boy_char[1] == 'A')) {
-            naksh1 = "mrug2";
-            rashi = 'Mithun';
-        }
-        else if ((boy_char[1] == 'i' || boy_char[1] == 'I')) {
-            naksh1 = "mrug2";
-            rashi = 'Mithun';
-        }
-        else if ((boy_char[1] == 'r' || boy_char[1] == 'R')) {
-            naksh1 = "mrug2";
-            rashi = 'Mithun';
-        }
-        else if ((boy_char[1] == 'e' || boy_char[1] == 'E') && (boy_char[2] == 'e' || boy_char[2] == 'E')) {
-            naksh1 = "mrug2";
-            rashi = 'Mithun';
-        }
-        else if ((boy_char[1] == 'e' || boy_char[1] == 'E')) {
-            naksh1 = "pun1";
-            rashi = 'Mithun';
-        }
-        else if ((boy_char[1] == 'U' || boy_char[1] == 'u')) {
-            naksh1 = "adra";
-            rashi = 'Mithun';
-        }
-        else if ((boy_char[1] == 'O' || boy_char[1] == 'o') && (boy_char[2] == 'O' || boy_char[2] == 'o')) {
-            naksh1 = "adra";
-            rashi = 'Mithun';
-        }
-        else if ((boy_char[1] == 'o' || boy_char[1] == 'O')) {
-            naksh1 = "pun1";
-            rashi = 'Mithun';
-
-        }
-        else{
-            naksh1 = "mrug2";
-            rashi = 'Mithun';
-        }
-
-
-    }
-    else if ((boy_char[0] == 'g' || boy_char[0] == 'G') && (boy_char[1] == 'h' || boy_char[1] == 'H')) {
-        naksh1 = "adra";
-        rashi = 'Mithun';
-    }
-    else if ((boy_char[0] == 'C' || boy_char[0] == 'c') && (boy_char[1] == 'h' || boy_char[1] == 'H') && (boy_char[2] == 'h' || boy_char[2] == 'H')) {
-        naksh1 = "adra";
-        rashi = 'Mithun';
-    }
-
-    else if ((boy_char[0] == 'h' || boy_char[0] == 'H')) {
-        if ((boy_char[1] == 'A' || boy_char[1] == 'a')) {
-            naksh1 = "pun2";
-            rashi = 'Kark';
-        }
-        else if ((boy_char[1] == 'i' || boy_char[1] == 'I')) {
-            naksh1 = "pun2";
-            rashi = 'Kark';
-        }
-        else if ((boy_char[1] == 'e' || boy_char[1] == 'E') && (boy_char[2] == 'e' || boy_char[2] == 'E')) {
-            naksh1 = "pun2";
-            rashi = 'Kark';
-        }
-        else if ((boy_char[1] == 'e' || boy_char[1] == 'E')) {
-            naksh1 = "pusya";
-            rashi = 'Kark';
-        }
-        else if ((boy_char[1] == 'o' || boy_char[1] == 'O') && (boy_char[2] == 'o' || boy_char[2] == 'O')) {
-            naksh1 = "pusya";
-            rashi = 'Kark';
-        }
-        else if ((boy_char[1] == 'o' || boy_char[1] == 'O')) {
-            naksh1 = "pusya";
-            rashi = 'Kark';
-        }
-        else{
-            naksh1 = "pun2";
-            rashi = 'Kark';
-        }
-
-    }
-    else if ((boy_char[0] == 'd' || boy_char[0] == 'D')) {
-        if ((boy_char[1] == 'A' || boy_char[1] == 'a')) {
-            naksh1 = "pubha2";
-            rashi = 'Meen';
-        }
-        else if ((boy_char[1] == 'i' || boy_char[1] == 'I')) {
-            naksh1 = "pubha2";
-            rashi = 'Meen';
-        }
-        else if ((boy_char[1] == 'e' || boy_char[1] == 'E') && (boy_char[2] == 'e' || boy_char[2] == 'E')) {
-            naksh1 = "pubha2";
-            rashi = 'Meen';
-        }
-        else if ((boy_char[1] == 'o' || boy_char[1] == 'O') && (boy_char[2] == 'o' || boy_char[2] == 'O')) {
-            naksh1 = "ubha";
-            rashi = 'Meen';
-        }
-        else if ((boy_char[1] == 'u' || boy_char[1] == 'U')) {
-            naksh1 = "ubha";
-            rashi = 'Meen';
-        }
-
-        else if ((boy_char[1] == 'e' || boy_char[1] == 'E')) {
-            naksh1 = "revti";
-            rashi = 'Meen';
-        }
-        else if ((boy_char[1] == 'o' || boy_char[1] == 'O')) {
-            naksh1 = "revti";
-            rashi = 'Meen';
-        }
-        else{
-            naksh1 = "pubha2";
-            rashi = 'Meen';
-        }
-
-    }
-    else if ((boy_char[0] == 't' || boy_char[0] == 'T') && (boy_char[1] == 'h' || boy_char[1] == 'H')) {
-        naksh1 = "ubha";
-        rashi = 'Meen';
-    }
-    else if ((boy_char[0] == 'm' || boy_char[0] == 'M')) {
-        if ((boy_char[1] == 'A' || boy_char[1] == 'a')) {
-            naksh1 = "magha";
-            rashi = 'Sinh';
-        }
-        else if ((boy_char[1] == 'i' || boy_char[1] == 'I')) {
-            naksh1 = "magha";
-            rashi = 'Sinh';
-        }
-        else if ((boy_char[1] == 'e' || boy_char[1] == 'E') && (boy_char[2] == 'e' || boy_char[2] == 'E')) {
-            naksh1 = "magha";
-            rashi = 'Sinh';
-        }
-        else if ((boy_char[1] == 'e' || boy_char[1] == 'E')) {
-            naksh1 = "magha";
-            rashi = 'Sinh';
-        }
-        else if ((boy_char[1] == 'o' || boy_char[1] == 'O') && (boy_char[2] == 'O' || boy_char[2] == 'o')) {
-            naksh1 = "magha";
-            rashi = 'Sinh';
-        }
-        else if ((boy_char[1] == 'o' || boy_char[1] == 'O')) {
-            naksh1 = "poofa";
-            rashi = 'Sinh';
-        }
-        else{
-            naksh1 = "magha";
-            rashi = 'Sinh';
-        }
-    }
-    else if ((boy_char[0] == 't' || boy_char[0] == 'T') && (boy_char[1] == 't' || boy_char[1] == 'T')) {
-        if ((boy_char[2] == 'A' || boy_char[2] == 'a')) {
-            naksh1 = "poofa";
-            rashi = 'Sinh';
-        }
-        else if ((boy_char[2] == 'i' || boy_char[2] == 'I')) {
-            naksh1 = "poofa";
-            rashi = 'Sinh';
-        }
-        else if ((boy_char[2] == 'e' || boy_char[2] == 'E') && (boy[3] == 'e' || boy[3] == 'E')) {
-            naksh1 = "poofa";
-            rashi = 'Sinh';
-        }
-        else if ((boy_char[2] == 'e' || boy_char[2] == 'E')) {
-            naksh1 = "ufa1";
-            rashi = 'Sinh';
-        }
-        else if ((boy_char[2] == 'u' || boy_char[2] == 'U')) {
-            naksh1 = "poofa";
-            rashi = 'Sinh';
-        }
-        else if ((boy_char[2] == 'o' || boy_char[2] == 'O') && (boy[3] == 'O' || boy[3] == 'o')) {
-            naksh1 = "poofa";
-            rashi = 'Sinh';
-        }
-        else if ((boy_char[2] == 'o' || boy_char[2] == 'O')) {
-            naksh1 = "ufa1";
-            rashi = 'Sinh';
-        }
-        else{
-            naksh1 = "poofa";
-            rashi = 'Sinh';
-        }
-    }
-    else if ((boy_char[0] == 'p' || boy_char[0] == 'P')) {
-        if ((boy_char[1] == 'A' || boy_char[1] == 'a')) {
-            naksh1 = "ufa2";
-            rashi = 'Kanya';
-        }
-        else if ((boy_char[1] == 'A' || boy_char[1] == 'a') && (boy_char[2] == 'A' || boy_char[2] == 'a')) {
-            naksh1 = "ufa2";
-            rashi = 'Kanya';
-        }
-        else if ((boy_char[1] == 'i' || boy_char[1] == 'I')) {
-            naksh1 = "ufa2";
-            rashi = 'Kanya';
-        }
-        else if ((boy_char[1] == 'e' || boy_char[1] == 'E') && (boy_char[2] == 'e' || boy_char[2] == 'E')) {
-            naksh1 = "ufa2";
-            rashi = 'Kanya';
-        }
-        else if ((boy_char[1] == 'e' || boy_char[1] == 'E')) {
-            naksh1 = "chitra1";
-            rashi = 'Kanya';
-        }
-        else if ((boy_char[1] == 'u' || boy_char[1] == 'U')) {
-            naksh1 = "hast";
-            rashi = 'Kanya';
-        }
-        else if ((boy_char[1] == 'o' || boy_char[1] == 'O') && (boy_char[2] == 'O' || boy_char[2] == 'o')) {
-            naksh1 = "hast";
-            rashi = 'Kanya';
-        }
-        else if ((boy_char[1] == 'o' || boy_char[1] == 'O')) {
-            naksh1 = "chitra1";
-            rashi = 'Kanya';
-        }
-        else{
-            naksh1 = "ufa2";
-            rashi = 'Kanya';
-        }
-    }
-
-    else if ((boy_char[0] == 'r' || boy_char[0] == 'R')) {
-        if ((boy_char[1] == 'A' || boy_char[1] == 'a')) {
-            naksh1 = "chitra2";
-            rashi = 'Tula';
-        }
-        else if ((boy_char[1] == 'A' || boy_char[1] == 'a') && (boy_char[2] == 'A' || boy_char[2] == 'a')) {
-            naksh1 = "chitra2";
-            rashi = 'Tula';
-        }
-        else if ((boy_char[1] == 'i' || boy_char[1] == 'I')) {
-            naksh1 = "chitra2";
-            rashi = 'Tula';
-        }
-        else if ((boy_char[1] == 'e' || boy_char[1] == 'E') && (boy_char[2] == 'e' || boy_char[2] == 'E')) {
-            naksh1 = "chitra2";
-            rashi = 'Tula';
-        }
-        else if ((boy_char[1] == 'e' || boy_char[1] == 'E')) {
-            naksh1 = "swati";
-            rashi = 'Tula';
-        }
-        else if ((boy_char[1] == 'u' || boy_char[1] == 'U')) {
-            naksh1 = "swati";
-            rashi = 'Tula';
-        }
-        else if ((boy_char[1] == 'o' || boy_char[1] == 'O') && (boy_char[2] == 'O' || boy_char[2] == 'o')) {
-            naksh1 = "swati";
-            rashi = 'Tula';
-        }
-        else if ((boy_char[1] == 'o' || boy_char[1] == 'O')) {
-            naksh1 = "swati";
-            rashi = 'Tula';
-        }
-        else{
-            naksh1 = "chitra2";
-            rashi = 'Tula';
-        }
-    }
-    else if ((boy_char[0] == 't' || boy_char[0] == 'T')) {
-        if ((boy_char[1] == 'A' || boy_char[1] == 'a')) {
-            naksh1 = "swati";
-            rashi = 'Tula';
-        }
-        else if ((boy_char[1] == 'A' || boy_char[1] == 'a') && (boy_char[2] == 'A' || boy_char[2] == 'a')) {
-            naksh1 = "swati";
-            rashi = 'Tula';
-        }
-        else if ((boy_char[1] == 'i' || boy_char[1] == 'I')) {
-            naksh1 = "vishakha1";
-            rashi = 'Tula';
-        }
-        else if ((boy_char[1] == 'e' || boy_char[1] == 'E') && (boy_char[2] == 'e' || boy_char[2] == 'E')) {
-            naksh1 = "vishakha1";
-            rashi = 'Tula';
-        }
-        else if ((boy_char[1] == 'e' || boy_char[1] == 'E')) {
-            naksh1 = "vishakha2";
-            rashi = 'Vraschik';
-        }
-        else if ((boy_char[1] == 'u' || boy_char[1] == 'U')) {
-            naksh1 = "vishakha1";
-            rashi = 'Tula';
-        }
-        else if ((boy_char[1] == 'o' || boy_char[1] == 'O') && (boy_char[2] == 'O' || boy_char[2] == 'o')) {
-            naksh1 = "vishakha1";
-            rashi = 'Tula';
-        }
-        else if ((boy_char[1] == 'o' || boy_char[1] == 'O')) {
-            naksh1 = "vishakha2";
-            rashi = 'Vraschik';
-        }
-        else{
-            naksh1 = "swati";
-            rashi = 'Tula';
-        }
-    }
-    else if ((boy_char[0] == 't' || boy_char[0] == 'T')) {
-        if ((boy_char[1] == 'A' || boy_char[1] == 'a')) {
-            naksh1 = "swati";
-            rashi = 'Tula';
-        }
-        else if ((boy_char[1] == 'A' || boy_char[1] == 'a') && (boy_char[2] == 'A' || boy_char[2] == 'a')) {
-            naksh1 = "swati";
-            rashi = 'Tula';
-        }
-        else if ((boy_char[1] == 'i' || boy_char[1] == 'I')) {
-            naksh1 = "vishakha1";
-            rashi = 'Tula';
-        }
-        else if ((boy_char[1] == 'e' || boy_char[1] == 'E') && (boy_char[2] == 'e' || boy_char[2] == 'E')) {
-            naksh1 = "vishakha1";
-            rashi = 'Tula';
-        }
-        else if ((boy_char[1] == 'e' || boy_char[1] == 'E')) {
-            naksh1 = "vishakha2";
-            rashi = 'Vraschik';
-        }
-        else if ((boy_char[1] == 'u' || boy_char[1] == 'U')) {
-            naksh1 = "vishakha1";
-            rashi = 'Tula';
-        }
-        else if ((boy_char[1] == 'o' || boy_char[1] == 'O') && (boy_char[2] == 'O' || boy_char[2] == 'o')) {
-            naksh1 = "vishakha1";
-            rashi = 'Tula';
-        }
-        else if ((boy_char[1] == 'o' || boy_char[1] == 'O')) {
-            naksh1 = "vishakha2";
-            rashi = 'Vraschik';
-        }
-        else{
-            naksh1 = "swati";
-            rashi = 'Tula';
-        }
-    }
-    else if ((boy_char[0] == 'n' || boy_char[0] == 'N')) {
-        if ((boy_char[1] == 'A' || boy_char[1] == 'a') && (boy_char[2] == 'A' || boy_char[2] == 'a')) {
-            naksh1 = "anu";
-            rashi = 'Vraschik';
-        }
-        else if ((boy_char[1] == 'A' || boy_char[1] == 'a')) {
-            naksh1 = "anu";
-            rashi = 'Vraschik';
-        }
-        else if ((boy_char[1] == 'i' || boy_char[1] == 'I')) {
-            naksh1 = "anu";
-            rashi = 'Vraschik';
-        }
-        else if ((boy_char[1] == 'e' || boy_char[1] == 'E') && (boy_char[2] == 'e' || boy_char[2] == 'E')) {
-            naksh1 = "anu";
-            rashi = 'Vraschik';
-        }
-        else if ((boy_char[1] == 'e' || boy_char[1] == 'E')) {
-            naksh1 = "anu";
-            rashi = 'Vraschik';
-        }
-        else if ((boy_char[1] == 'u' || boy_char[1] == 'U')) {
-            naksh1 = "anu";
-            rashi = 'Vraschik';
-        }
-        else if ((boy_char[1] == 'o' || boy_char[1] == 'O') && (boy_char[2] == 'O' || boy_char[2] == 'o')) {
-            naksh1 = "anu";
-            rashi = 'Vraschik';
-        }
-        else if ((boy_char[1] == 'o' || boy_char[1] == 'O')) {
-            naksh1 = "jest";
-            rashi = 'Vraschik';
-        }
-        else{
-            naksh1 = "anu";
-            rashi = 'Vraschik';
-        }
-    }
-    else if ((boy_char[0] == 'y' || boy_char[0] == 'Y')) {
-        if ((boy_char[1] == 'A' || boy_char[1] == 'a') && (boy_char[2] == 'A' || boy_char[2] == 'a')) {
-            naksh1 = "jest";
-            rashi = 'Vraschik';
-        }
-        else if ((boy_char[1] == 'A' || boy_char[1] == 'a')) {
-            naksh1 = "jest";
-            rashi = 'Vraschik';
-        }
-        else if ((boy_char[1] == 'i' || boy_char[1] == 'I')) {
-            naksh1 = "jest";
-            rashi = 'Vraschik';
-        }
-        else if ((boy_char[1] == 'e' || boy_char[1] == 'E') && (boy_char[2] == 'e' || boy_char[2] == 'E')) {
-            naksh1 = "jest";
-            rashi = 'Vraschik';
-        }
-        else if ((boy_char[1] == 'e' || boy_char[1] == 'E')) {
-            naksh1 = "mool";
-            rashi = 'Dhanu';
-        }
-        else if ((boy_char[1] == 'u' || boy_char[1] == 'U')) {
-            naksh1 = "jest";
-            rashi = 'Vraschik';
-        }
-        else if ((boy_char[1] == 'o' || boy_char[1] == 'O') && (boy_char[2] == 'O' || boy_char[2] == 'o')) {
-            naksh1 = "jest";
-            rashi = 'Vraschik';
-        }
-        else if ((boy_char[1] == 'o' || boy_char[1] == 'O')) {
-            naksh1 = "mool";
-            rashi = 'Dhanu';
-        }
-        else{
-            naksh1 = "jest";
-            rashi = 'Vraschik';
-        }
-    }
-    else if ((boy_char[0] == 'f' || boy_char[0] == 'F')) {
-        naksh1 = "poosha";
-        rashi = 'Dhanu';
-    }
-    else if ((boy_char[0] == 'g' || boy_char[0] == 'G')) {
-        if ((boy_char[1] == 'A' || boy_char[1] == 'a') && (boy_char[2] == 'A' || boy_char[2] == 'a')) {
-            naksh1 = "dhanist1";
-            rashi = 'Makar';
-        }
-        else if ((boy_char[1] == 'A' || boy_char[1] == 'a')) {
-            naksh1 = "dhanist1";
-            rashi = 'Makar';
-        }
-        else if ((boy_char[1] == 'i' || boy_char[1] == 'I')) {
-            naksh1 = "dhanist1";
-            rashi = 'Makar';
-        }
-        else if ((boy_char[1] == 'e' || boy_char[1] == 'E') && (boy_char[2] == 'e' || boy_char[2] == 'E')) {
-            naksh1 = "dhanist1";
-            rashi = 'Makar';
-        }
-        else if ((boy_char[1] == 'e' || boy_char[1] == 'E')) {
-            naksh1 = "dhanist2";
-            rashi = 'Kumbha';
-        }
-        else if ((boy_char[1] == 'u' || boy_char[1] == 'U')) {
-            naksh1 = "dhanist2";
-            rashi = 'Kumbha';
-        }
-        else if ((boy_char[1] == 'o' || boy_char[1] == 'O') && (boy_char[2] == 'O' || boy_char[2] == 'o')) {
-            naksh1 = "dhanist2";
-            rashi = 'Kumbha';
-        }
-        else if ((boy_char[1] == 'o' || boy_char[1] == 'O')) {
-            naksh1 = "sat";
-            rashi = 'Kumbha';
-        }
-        else{
-            naksh1 = "dhanist1";
-            rashi = 'Makar';
-        }
-    }
-    else if ((boy_char[0] == 'j' || boy_char[0] == 'J')) {
-        if ((boy_char[1] == 'A' || boy_char[1] == 'a') && (boy_char[2] == 'A' || boy_char[2] == 'a')) {
-            naksh1 = "usa2";
-            rashi = 'Makar';
-        }
-        else if ((boy_char[1] == 'A' || boy_char[1] == 'a')) {
-            naksh1 = "usa2";
-            rashi = 'Makar';
-        }
-        else if ((boy_char[1] == 'i' || boy_char[1] == 'I')) {
-            naksh1 = "usa2";
-            rashi = 'Makar';
-        }
-        else if ((boy_char[1] == 'e' || boy_char[1] == 'E') && (boy_char[2] == 'e' || boy_char[2] == 'E')) {
-            naksh1 = "usa2";
-            rashi = 'Makar';
-        }
-        else{
-            naksh1 = "usa2";
-            rashi = 'Makar';
-        }
-    }
-    
-    else if ((boy_char[0] == 's' || boy_char[0] == 'S')) {
-        if (boy_char[1] == 'h' || boy_char[1] == 'H') {
-            if ((boy_char[2] == 'A' || boy_char[2] == 'a') && (boy_char[3] == 'A' || boy_char[3] == 'a')) {
-                naksh1 = "sat";
-                rashi = 'Kumbha';
+            var naksh1 = "n1";
+            var naksh2 = "n2";
+            var boy = document.querySelector('#boy1').value;
+            var girl = document.querySelector('#girl1').value;
+            var boy_char = boy[0] + boy[1] + boy[2];
+            var girl_char = girl[0] + girl[1] + girl[2];
+            let total1 = [''];
+            let total2 = [''];
+            total1 = toString(boy);
+            total2 = toString(girl);
+            var result1 = cal(naksh1, boy, boy_char);
+            total1 = result1;
+            var result2 = cal(naksh2, girl, girl_char);
+            total2 = result2;
+            var gun = Gun(result1[1], result2[1]);
+            if (boy.length < 1) {
+                alert('Please Fill Boy Name');
+                return;
             }
-            else if ((boy_char[2] == 'A' || boy_char[2] == 'a')) {
-                naksh1 = "sat";
-                rashi = 'Kumbha';
+            else if (girl.length < 1) {
+                alert('Please Fill Girl Name');
+                return;
             }
-            else if ((boy_char[2] == 'i' || boy_char[2] == 'I')) {
-                naksh1 = "sat";
-                rashi = 'Kumbha';
-            }
-            else if ((boy_char[2] == 'e' || boy_char[2] == 'E') && (boy[3] == 'e' || boy[3] == 'E')) {
-                naksh1 = "sat";
-                rashi = 'Kumbha';
-            }
-            else if ((boy_char[2] == 'e' || boy_char[2] == 'E')) {
-                naksh1 = "pubha1";
-                rashi = 'Kumbha';
-            }
-            else if ((boy_char[2] == 'u' || boy_char[2] == 'U')) {
-                naksh1 = "sat";
-                rashi = 'Kumbha';
-            }
-            else if ((boy_char[2] == 'o' || boy_char[2] == 'O') && (boy[3] == 'O' || boy[3] == 'o')) {
-                naksh1 = "sat";
-                rashi = 'Kumbha';
-            }
-            else if ((boy_char[2] == 'o' || boy_char[2] == 'O')) {
-                naksh1 = "pubha1";
-                rashi = 'Kumbha';
-            }
-            else{
-                naksh1 = "sat";
-                rashi = 'Kumbha';
-            }
+            else {
 
-        }
-        else {
-            if ((boy_char[1] == 'A' || boy_char[1] == 'a') && (boy_char[2] == 'A' || boy_char[2] == 'a')) {
-                naksh1 = "sat";
-                rashi = 'Kumbha';
-            }
-            else if ((boy_char[1] == 'A' || boy_char[1] == 'a')) {
-                naksh1 = "sat";
-                rashi = 'Kumbha';
-            }
-            else if ((boy_char[1] == 'i' || boy_char[1] == 'I')) {
-                naksh1 = "sat";
-                rashi = 'Kumbha';
-            }
-            else if ((boy_char[1] == 'e' || boy_char[1] == 'E') && (boy[2] == 'e' || boy[2] == 'E')) {
-                naksh1 = "sat";
-                rashi = 'Kumbha';
-            }
-            else if ((boy_char[1] == 'e' || boy_char[1] == 'E')) {
-                naksh1 = "pubha1";
-                rashi = 'Kumbha';
-            }
-            else if ((boy_char[1] == 'u' || boy_char[1] == 'U')) {
-                naksh1 = "sat";
-                rashi = 'Kumbha';
-            }
-            else if ((boy_char[1] == 'o' || boy_char[1] == 'O') && (boy[2] == 'O' || boy[2] == 'o')) {
-                naksh1 = "sat";
-                rashi = 'Kumbha';
-            }
-            else if ((boy_char[1] == 'o' || boy_char[1] == 'O')) {
-                naksh1 = "pubha1";
-                rashi = 'Kumbha';
-            }
-            else{
-                naksh1 = "sat";
-                rashi = 'Kumbha';
+
+                document.getElementById('fboy').innerHTML = boy;
+                document.getElementById('fboy_rashi').innerHTML = total1[0];
+                document.getElementById('fboy_naksh').innerHTML = total1[1];
+
+                document.getElementById('fgirl').innerHTML = girl;
+                document.getElementById('fgirl_rashi').innerHTML = total2[0];
+                document.getElementById('fgirl_naksh').innerHTML = total2[1];
+                document.getElementById('Rslt').innerHTML = gun;
+
+
             }
         }
-    
-    tot = [rashi, naksh1];
-    return tot;
-}
 
-function Gun(result1, result2) {
-    var n1 = 0, n2 = 0, i = 0;
-    var result = 0;
-    let arr = ['asv', 'bhardi', 'kratika1', 'kratika2', 'rohdi', 'mrug1', 'mrug2',
-        'adra', 'pun1', 'pun2', 'pusya', 'asle', 'magha', 'poofa', 'ufa1', 'ufa2',
-        'hast', 'chitra1', 'chitra2', 'swati', 'vishakha1', 'vishakha2', 'anu', 'jest', 'mool', 'poosha',
-        'usha1', 'usha2', 'sravan', 'danist1', 'danist2', 'sat', 'pubha1', 'pubha2', 'ubha', 'revti'];
 
-     gunn = [[28, 33, 28, 18, 21, 22, 26, 17, 18, 22, 31, 27, 21, 26, 16, 11, 9, 13, 22, 26, 22, 19, 26, 15, 13, 26, 24, 26, 26, 21, 21, 15, 16, 14, 24, 26],
-    [34, 28, 29, 19, 22, 14, 18, 26, 26, 30, 23, 24, 20, 18, 26, 21, 20, 5, 14, 29, 22, 19, 17, 19, 20, 19, 27, 28, 27, 10, 10, 20, 24, 22, 17, 28],
-    [27, 29, 28, 20, 10, 18, 22, 20, 22, 16, 27, 23, 16, 19, 20, 15, 16, 18, 27, 16, 19, 16, 21, 26, 24, 18, 14, 15, 12, 25, 25, 27, 19, 17, 19, 12],
-    [18, 20, 19, 28, 21, 26, 19, 17, 18, 22, 24, 20, 18, 21, 22, 29, 29, 23, 22, 11, 14, 21, 26, 31, 20, 13, 9, 14, 11, 23, 29, 31, 23, 20, 22, 14],
-    [23, 23, 10, 19, 28, 36, 27, 23, 23, 27, 27, 13, 12, 26, 27, 25, 26, 20, 19, 15, 9, 16, 30, 24, 14, 20, 11, 16, 18, 20, 26, 24, 30, 27, 27, 19],
-    [23, 14, 18, 27, 35, 28, 16, 24, 23, 27, 20, 22, 20, 15, 25, 23, 26, 13, 12, 25, 17, 23, 22, 25, 15, 11, 17, 21, 26, 12, 19, 27, 29, 26, 17, 27],
-    [27, 18, 22, 18, 27, 20, 28, 33, 31, 19, 12, 15, 23, 20, 27, 30, 34, 21, 14, 27, 20, 14, 12, 14, 23, 19, 25, 21, 26, 13, 14, 22, 24, 26, 17, 27],
-    [19, 27, 21, 18, 24, 26, 34, 28, 25, 13, 20, 13, 22, 28, 21, 24, 24, 27, 20, 27, 20, 13, 17, 3, 13, 28, 28, 23, 23, 18, 19, 12, 17, 19, 27, 27],
-    [19, 26, 23, 20, 23, 24, 32, 24, 28, 13, 23, 17, 22, 23, 20, 23, 24, 26, 19, 27, 21, 14, 20, 6, 14, 27, 27, 22, 23, 18, 19, 11, 17, 19, 27, 28],
-    [21, 28, 23, 22, 25, 26, 19, 10, 14, 28, 35, 28, 16, 20, 14, 17, 16, 20, 16, 27, 21, 20, 26, 11, 8, 21, 21, 26, 27, 22, 12, 7, 11, 17, 25, 25],
-    [30, 21, 26, 23, 25, 18, 12, 18, 21, 35, 28, 30, 18, 14, 23, 26, 27, 12, 11, 26, 21, 20, 19, 22, 17, 11, 22, 27, 25, 13, 4, 14, 18, 24, 18, 27],
-    [26, 26, 22, 19, 12, 21, 14, 12, 16, 28, 30, 28, 15, 15, 17, 20, 20, 25, 24, 11, 16, 15, 20, 26, 22, 16, 7, 12, 12, 27, 18, 18, 12, 18, 20, 13],
-    [21, 19, 17, 17, 9, 18, 22, 21, 21, 16, 18, 16, 28, 30, 26, 15, 16, 21, 24, 11, 16, 22, 25, 32, 24, 20, 9, 5, 6, 18, 23, 24, 17, 19, 19, 12],
-    [26, 18, 20, 21, 23, 15, 19, 27, 26, 23, 18, 17, 30, 28, 34, 23, 29, 7, 10, 24, 18, 24, 22, 24, 18, 17, 25, 21, 19, 4, 9, 19, 23, 24, 17, 25],
-    [17, 25, 20, 21, 25, 23, 27, 20, 20, 17, 26, 19, 26, 34, 28, 18, 16, 13, 16, 25, 16, 22, 31, 17, 9, 25, 26, 22, 21, 12, 17, 19, 15, 16, 27, 24],
-    [13, 21, 16, 21, 25, 23, 30, 23, 23, 19, 28, 21, 17, 25, 19, 28, 27, 24, 16, 25, 16, 18, 28, 13, 14, 29, 30, 26, 25, 16, 16, 10, 14, 18, 29, 27],
-    [11, 20, 17, 22, 25, 26, 33, 22, 23, 19, 28, 22, 17, 21, 16, 26, 28, 28, 20, 26, 18, 20, 26, 14, 15, 27, 28, 24, 25, 21, 21, 6, 15, 18, 27, 28],
-    [14, 6, 19, 24, 20, 13, 20, 26, 25, 21, 13, 26, 22, 8, 14, 24, 28, 28, 20, 20, 26, 28, 12, 25, 27, 13, 22, 17, 19, 17, 19, 24, 17, 21, 11, 22],
-    [23, 15, 28, 23, 20, 13, 14, 20, 19, 21, 13, 26, 25, 11, 17, 17, 21, 21, 28, 28, 34, 24, 7, 22, 27, 13, 22, 25, 27, 25, 19, 26, 19, 14, 4, 15],
-    [28, 29, 17, 12, 15, 26, 27, 26, 27, 28, 28, 14, 12, 24, 25, 25, 27, 21, 28, 28, 20, 10, 22, 17, 23, 27, 19, 22, 23, 29, 23, 21, 27, 21, 20, 13],
-    [22, 23, 20, 15, 10, 19, 20, 20, 21, 22, 22, 18, 17, 19, 17, 17, 19, 27, 34, 20, 28, 18, 17, 20, 27, 21, 14, 17, 17, 31, 25, 26, 21, 15, 13, 7],
-    [17, 17, 14, 19, 14, 23, 13, 13, 13, 19, 19, 14, 21, 23, 21, 18, 19, 28, 22, 8, 17, 28, 28, 31, 21, 15, 9, 12, 12, 26, 25, 25, 20, 20, 18, 11],
-    [24, 14, 19, 24, 27, 20, 11, 16, 20, 25, 18, 20, 24, 20, 29, 26, 26, 12, 7, 21, 17, 28, 28, 31, 16, 13, 22, 25, 26, 13, 13, 21, 26, 25, 18, 26],
-    [13, 17, 24, 29, 22, 23, 13, 3, 5, 10, 21, 25, 31, 23, 16, 13, 12, 25, 19, 15, 20, 31, 31, 28, 15, 16, 17, 20, 21, 26, 26, 19, 12, 10, 21, 21],
-    [12, 20, 24, 19, 13, 14, 22, 15, 13, 9, 18, 24, 25, 18, 9, 13, 13, 26, 26, 22, 26, 23, 13, 15, 28, 28, 26, 15, 16, 20, 28, 21, 14, 16, 25, 28],
-    [26, 19, 18, 12, 19, 11, 19, 27, 27, 23, 13, 17, 19, 17, 25, 28, 27, 12, 12, 27, 20, 16, 16, 18, 28, 28, 34, 23, 24, 8, 16, 23, 30, 32, 23, 32],
-    [25, 27, 14, 8, 11, 18, 25, 27, 27, 23, 24, 9, 9, 25, 29, 28, 21, 21, 16, 13, 10, 24, 18, 26, 34, 28, 18, 16, 15, 23, 23, 29, 31, 32, 23],
-    [28, 29, 16, 13, 17, 22, 20, 22, 22, 28, 28, 14, 5, 21, 22, 25, 25, 17, 24, 16, 13, 28, 23, 16, 25, 19, 28, 26, 26, 17, 17, 23, 30, 31, 22],
-    [27, 27, 13, 11, 17, 26, 23, 21, 22, 28, 26, 15, 6, 18, 20, 23, 24, 18, 25, 22, 16, 14, 28, 23, 17, 23, 16, 25, 28, 30, 20, 18, 23, 31, 30, 22],
-    [21, 10, 26, 23, 20, 13, 9, 16, 17, 23, 15, 28, 18, 4, 12, 16, 20, 16, 23, 27, 30, 28, 15, 28, 21, 9, 16, 26, 30, 28, 18, 23, 19, 26, 15, 22],
-    [21, 11, 26, 30, 27, 20, 13, 19, 19, 15, 5, 20, 24, 10, 18, 17, 21, 18, 19, 23, 25, 26, 13, 26, 29, 17, 24, 18, 22, 20, 28, 33, 28, 18, 7, 15],
-    [16, 21, 28, 32, 25, 28, 21, 12, 13, 8, 15, 20, 25, 19, 12, 11, 10, 25, 26, 21, 26, 27, 22, 19, 22, 24, 24, 18, 19, 25, 33, 28, 19, 8, 17, 17],
-    [18, 25, 20, 24, 31, 31, 24, 17, 18, 13, 21, 14, 18, 24, 16, 15, 17, 18, 19, 28, 21, 21, 27, 12, 15, 31, 30, 24, 25, 20, 28, 19, 28, 18, 23, 20],
-    [14, 21, 16, 19, 26, 26, 25, 18, 19, 18, 26, 18, 16, 22, 14, 16, 18, 19, 12, 21, 14, 21, 27, 11, 15, 31, 30, 29, 30, 25, 17, 7, 16, 28, 33, 30],
-    [24, 15, 18, 21, 25, 17, 16, 25, 27, 26, 19, 20, 17, 15, 25, 27, 26, 9, 2, 19, 12, 19, 20, 22, 24, 22, 31, 30, 29, 14, 6, 16, 21, 33, 28, 34],
-    [25, 24, 11, 14, 17, 26, 25, 24, 25, 24, 27, 13, 12, 22, 23, 25, 26, 20, 13, 11, 5, 12, 27, 22, 26, 30, 21, 20, 22, 22, 14, 16, 18, 29, 34, 28]
-    ];
 
-    for (i = 0; i < 26; i++) {
-        if (arr[i] == result1) {
-            n1 = i;
-            
-            break;
+        function cal(naksh1, boy, boy_char) {
+            let tot = ['', ''];
+            var rashi = '';
+            if ((boy_char[0] == 'c' || boy_char[0] == 'C') && (boy_char[1] == 'h' || boy_char[1] == 'H')) {
+                if ((boy_char[2] == 'e' || boy_char[2] == 'E') && (boy[3] == 'e' || boy[3] == 'E')) {
+                    naksh1 = "revti";
+                    rashi = 'meen';
+                }
+                else if ((boy_char[2] == 'e' || boy_char[2] == 'E') || (boy_char[2] == 'o' || boy_char[2] == 'O') ||
+                    (boy_char[2] == 'u' || boy_char[2] == 'U')) {
+                    naksh1 = "asv";
+                    rashi = 'mesh';
+
+                }
+                else if ((boy_char[2] == 'a' || boy_char[2] == 'A') || (boy_char[2] == 'I' || boy_char[2] == 'i')) {
+                    naksh1 = "revti";
+                    rashi = 'meen';
+                }
+
+            }
+            else if ((boy_char[0] == 'c' || boy_char[0] == 'C') && (boy_char[1] == 'h' || boy_char[1] == 'H')) {
+                if ((boy_char[2] == 'r' || boy_char[2] == 'R')) {
+                    naksh1 = "revti";
+                    rashi = 'meen';
+                }
+                else if ((boy_char[0] == 'b' || boy_char[0] == 'B') && (boy_char[1] == 'h' || boy_char[1] == 'H')) {
+                    if ((boy_char[2] == 'a' || boy_char[2] == 'A')) {
+                        naksh1 = "mool";
+                        rashi = 'Dhanu';
+                    }
+                    else if ((boy_char[2] == 'e' || boy_char[2] == 'E') && (boy[3] == 'e' || boy[3] == 'E')) {
+                        naksh1 = "mool";
+                        rashi = 'Dhanu';
+                    }
+                    else if ((boy_char[2] == 'e' || boy_char[2] == 'E')) {
+                        naksh1 = "usha1";
+                        rashi = 'Dhanu';
+                    }
+                    else if ((boy_char[2] == 'i' || boy_char[2] == 'I')) {
+                        naksh1 = "mool";
+                        rashi = 'Dhanu';
+                    }
+                    else if ((boy_char[2] == 'u' || boy_char[2] == 'U')) {
+                        naksh1 = "poosha";
+                        rashi = 'Dhanu';
+                    }
+                    else if ((boy_char[2] == 'o' || boy_char[2] == 'O') && (boy[3] == 'O' || boy[3] == 'o')) {
+                        naksh1 = "poosha";
+                        rashi = 'Dhanu';
+                    }
+                    else if ((boy_char[2] == 'o' || boy_char[2] == 'O')) {
+                        naksh1 = "usha1";
+                        rashi = 'Dhanu';
+                    }
+                    else {
+                        naksh1 = "mool";
+                        rashi = 'Dhanu';
+                    }
+
+
+
+                }
+            }
+
+            else if ((boy_char[0] == 'T' || boy_char[0] == 't') && (boy_char[1] == 'r' || boy_char[1] == 'R')) {
+                naksh1 = "ubha";
+                rashi = 'Meen';
+            }
+
+            else if ((boy_char[0] == 'D' || boy_char[0] == 'd') && (boy_char[1] == 'h' || boy_char[1] == 'H')) {
+                naksh1 = "poosha";
+                rashi = 'Dhanu';
+            }
+            else if ((boy_char[0] == 'c' || boy_char[0] == 'C') && (boy_char[1] == 'h' || boy_char[1] == 'H') && (boy_char[2] == 'h' || boy_char[2] == 'H')) {
+                naksh1 = "adra";
+                rashi = 'Mithun';
+            }
+            else if ((boy_char[0] == 'j' || boy_char[0] == 'J') && (boy_char[1] == 'h' || boy_char[1] == 'H')) {
+                naksh1 = "ubha";
+                rashi = 'Meen';
+            }
+
+            else if ((boy_char[0] == 't' || boy_char[0] == 'T') && (boy_char[1] == 'h' || boy_char[1] == 'H') && (boy_char[2] == 'h' || boy_char[2] == 'H')) {
+                naksh1 = "hast";
+                rashi = 'Kanya';
+            }
+            else if ((boy_char[0] == 't' || boy_char[0] == 'T') && (boy_char[1] == 'h' || boy_char[1] == 'H')) {
+                naksh1 = "ubha";
+                rashi = 'Meen';
+            }
+
+            else if ((boy_char[0] == 'l' || boy_char[0] == 'L')) {
+                if ((boy_char[1] == 'a' || boy_char[1] == 'A')) {
+                    naksh1 = "asv";
+                    rashi = 'Mesh';
+                }
+                else if ((boy_char[1] == 'e' || boy_char[1] == 'E') && (boy[2] == 'e' || boy[2] == 'E')) {
+                    naksh1 = "bhardi";
+                    rashi = 'Mesh';
+                }
+                else if ((boy_char[11] == 'e' || boy_char[1] == 'E')) {
+                    naksh1 = "bhardi";
+                    rashi = 'Mesh';
+                }
+                else if ((boy_char[1] == 'o' || boy_char[1] == 'O')) {
+                    naksh1 = "bhardi";
+                    rashi = 'Mesh';
+                }
+                else if ((boy_char[1] == 'i' || boy_char[1] == 'I')) {
+                    naksh1 = "bhardi";
+                    rashi = 'Mesh';
+                }
+                else if ((boy_char[1] == 'u' || boy_char[1] == 'U')) {
+                    naksh1 = "bhardi";
+                    rashi = 'Mesh';
+
+                }
+                else {
+                    naksh1 = "asv";
+                    rashi = 'Mesh';
+                }
+
+            }
+            else if ((boy_char[0] == 'b' || boy_char[0] == 'B') || (boy_char[0] == 'v' || boy_char[0] == 'V')) {
+                if ((boy_char[1] == 'a' || boy_char[1] == 'A')) {
+                    naksh1 = "rohdi";
+                    rashi = 'Vrash';
+                }
+                else if ((boy_char[1] == 'e' || boy_char[1] == 'E') && (boy[2] == 'e' || boy[2] == 'E')) {
+                    naksh1 = "rohdi";
+                    rashi = 'Vrash';
+                }
+                else if ((boy_char[1] == 'e' || boy_char[1] == 'E')) {
+                    naksh1 = "mrug1";
+                    rashi = 'Vrash';
+                }
+                else if ((boy_char[1] == 'o' || boy_char[1] == 'O') && (boy[2] == 'o' || boy[2] == 'O')) {
+                    naksh1 = "rohdi";
+                    rashi = 'Vrash';
+                }
+                else if ((boy_char[1] == 'o' || boy_char[1] == 'O')) {
+                    naksh1 = "mrug1";
+                    rashi = 'Vrash';
+                }
+                else if ((boy_char[1] == 'i' || boy_char[1] == 'I')) {
+                    naksh1 = "rohdi";
+                    rashi = 'Vrash';
+                }
+                else if ((boy_char[1] == 'u' || boy_char[1] == 'U')) {
+                    naksh1 = "bhardi";
+                    rashi = 'Mesh';
+                }
+                else {
+                    naksh1 = "rohdi";
+                    rashi = 'Vrash';
+                }
+
+            }
+            else if ((boy_char[0] == 'o' || boy_char[0] == 'O')) {
+                naksh1 = "rohdi";
+                rashi = 'Vrash';
+            }
+            else if ((boy_char[0] == 'a' || boy_char[0] == 'A')) {
+                naksh1 = "kratika1";
+                rashi = 'Mesh';
+            }
+            else if ((boy_char[0] == 'i' || boy_char[0] == 'I')) {
+                naksh1 = "kratika1";
+                rashi = 'Mesh';
+            }
+            else if ((boy_char[0] == 'o' || boy_char[0] == 'O') && (boy_char[1] == 'o' || boy_char[1] == 'O')) {
+                naksh1 = "kratika2";
+                rashi = 'Vrash';
+            }
+            else if ((boy_char[0] == 'u' || boy_char[0] == 'U')) {
+                naksh1 = "kratika2";
+                rashi = 'Vrash';
+            }
+            else if ((boy_char[0] == 'e' || boy_char[0] == 'E')) {
+                naksh1 = "kratika2";
+                rashi = 'Vrash';
+            }
+            else if ((boy_char[0] == 'K' || boy_char[0] == 'k') && (boy_char[1] == 'h' || boy_char[1] == 'H')) {
+                if ((boy_char[2] == 'i' || boy_char[2] == 'I')) {
+                    naksh1 = "sravan";
+                    rashi = 'Makar';
+                }
+                else if ((boy_char[2] == 'e' || boy_char[2] == 'E') && (boy[3] == 'e' || boy[3] == 'E')) {
+                    naksh1 = "sravan";
+                    rashi = 'Makar';
+                }
+                else if ((boy_char[2] == 'e' || boy_char[2] == 'E')) {
+                    naksh1 = "sravan";
+                    rashi = 'Makar';
+                }
+                else if ((boy_char[2] == 'u' || boy_char[2] == 'U')) {
+                    naksh1 = "sravan";
+                    rashi = 'Makar';
+                }
+                else if ((boy_char[2] == 'o' || boy_char[2] == 'O') && (boy_char[3] == 'O' || boy_char[3] == 'o')) {
+                    naksh1 = "sravan";
+                    rashi = 'Makar';
+                }
+                else if ((boy_char[2] == 'o' || boy_char[2] == 'O')) {
+                    naksh1 = "sravan";
+                    rashi = 'Makar';
+                }
+            }
+            else if ((boy_char[0] == 'c' || boy_char[0] == 'C') || (boy_char[0] == 'k' || boy_char[0] == 'K')) {
+                if ((boy_char[1] == 'a' || boy_char[1] == 'A')) {
+                    naksh1 = "mrug2";
+                    rashi = 'Mithun';
+                }
+                else if ((boy_char[1] == 'i' || boy_char[1] == 'I')) {
+                    naksh1 = "mrug2";
+                    rashi = 'Mithun';
+                }
+                else if ((boy_char[1] == 'r' || boy_char[1] == 'R')) {
+                    naksh1 = "mrug2";
+                    rashi = 'Mithun';
+                }
+                else if ((boy_char[1] == 'e' || boy_char[1] == 'E') && (boy_char[2] == 'e' || boy_char[2] == 'E')) {
+                    naksh1 = "mrug2";
+                    rashi = 'Mithun';
+                }
+                else if ((boy_char[1] == 'e' || boy_char[1] == 'E')) {
+                    naksh1 = "pun1";
+                    rashi = 'Mithun';
+                }
+                else if ((boy_char[1] == 'U' || boy_char[1] == 'u')) {
+                    naksh1 = "adra";
+                    rashi = 'Mithun';
+                }
+                else if ((boy_char[1] == 'O' || boy_char[1] == 'o') && (boy_char[2] == 'O' || boy_char[2] == 'o')) {
+                    naksh1 = "adra";
+                    rashi = 'Mithun';
+                }
+                else if ((boy_char[1] == 'o' || boy_char[1] == 'O')) {
+                    naksh1 = "pun1";
+                    rashi = 'Mithun';
+
+                }
+                else {
+                    naksh1 = "mrug2";
+                    rashi = 'Mithun';
+                }
+
+
+            }
+            else if ((boy_char[0] == 'g' || boy_char[0] == 'G') && (boy_char[1] == 'h' || boy_char[1] == 'H')) {
+                naksh1 = "adra";
+                rashi = 'Mithun';
+            }
+            else if ((boy_char[0] == 'C' || boy_char[0] == 'c') && (boy_char[1] == 'h' || boy_char[1] == 'H') && (boy_char[2] == 'h' || boy_char[2] == 'H')) {
+                naksh1 = "adra";
+                rashi = 'Mithun';
+            }
+
+            else if ((boy_char[0] == 'h' || boy_char[0] == 'H')) {
+                if ((boy_char[1] == 'A' || boy_char[1] == 'a')) {
+                    naksh1 = "pun2";
+                    rashi = 'Kark';
+                }
+                else if ((boy_char[1] == 'i' || boy_char[1] == 'I')) {
+                    naksh1 = "pun2";
+                    rashi = 'Kark';
+                }
+                else if ((boy_char[1] == 'e' || boy_char[1] == 'E') && (boy_char[2] == 'e' || boy_char[2] == 'E')) {
+                    naksh1 = "pun2";
+                    rashi = 'Kark';
+                }
+                else if ((boy_char[1] == 'e' || boy_char[1] == 'E')) {
+                    naksh1 = "pusya";
+                    rashi = 'Kark';
+                }
+                else if ((boy_char[1] == 'o' || boy_char[1] == 'O') && (boy_char[2] == 'o' || boy_char[2] == 'O')) {
+                    naksh1 = "pusya";
+                    rashi = 'Kark';
+                }
+                else if ((boy_char[1] == 'o' || boy_char[1] == 'O')) {
+                    naksh1 = "pusya";
+                    rashi = 'Kark';
+                }
+                else {
+                    naksh1 = "pun2";
+                    rashi = 'Kark';
+                }
+
+            }
+            else if ((boy_char[0] == 'd' || boy_char[0] == 'D')) {
+                if ((boy_char[1] == 'A' || boy_char[1] == 'a')) {
+                    naksh1 = "pubha2";
+                    rashi = 'Meen';
+                }
+                else if ((boy_char[1] == 'i' || boy_char[1] == 'I')) {
+                    naksh1 = "pubha2";
+                    rashi = 'Meen';
+                }
+                else if ((boy_char[1] == 'e' || boy_char[1] == 'E') && (boy_char[2] == 'e' || boy_char[2] == 'E')) {
+                    naksh1 = "pubha2";
+                    rashi = 'Meen';
+                }
+                else if ((boy_char[1] == 'o' || boy_char[1] == 'O') && (boy_char[2] == 'o' || boy_char[2] == 'O')) {
+                    naksh1 = "ubha";
+                    rashi = 'Meen';
+                }
+                else if ((boy_char[1] == 'u' || boy_char[1] == 'U')) {
+                    naksh1 = "ubha";
+                    rashi = 'Meen';
+                }
+
+                else if ((boy_char[1] == 'e' || boy_char[1] == 'E')) {
+                    naksh1 = "revti";
+                    rashi = 'Meen';
+                }
+                else if ((boy_char[1] == 'o' || boy_char[1] == 'O')) {
+                    naksh1 = "revti";
+                    rashi = 'Meen';
+                }
+                else {
+                    naksh1 = "pubha2";
+                    rashi = 'Meen';
+                }
+
+            }
+            else if ((boy_char[0] == 't' || boy_char[0] == 'T') && (boy_char[1] == 'h' || boy_char[1] == 'H')) {
+                naksh1 = "ubha";
+                rashi = 'Meen';
+            }
+            else if ((boy_char[0] == 'm' || boy_char[0] == 'M')) {
+                if ((boy_char[1] == 'A' || boy_char[1] == 'a')) {
+                    naksh1 = "magha";
+                    rashi = 'Sinh';
+                }
+                else if ((boy_char[1] == 'i' || boy_char[1] == 'I')) {
+                    naksh1 = "magha";
+                    rashi = 'Sinh';
+                }
+                else if ((boy_char[1] == 'e' || boy_char[1] == 'E') && (boy_char[2] == 'e' || boy_char[2] == 'E')) {
+                    naksh1 = "magha";
+                    rashi = 'Sinh';
+                }
+                else if ((boy_char[1] == 'e' || boy_char[1] == 'E')) {
+                    naksh1 = "magha";
+                    rashi = 'Sinh';
+                }
+                else if ((boy_char[1] == 'o' || boy_char[1] == 'O') && (boy_char[2] == 'O' || boy_char[2] == 'o')) {
+                    naksh1 = "magha";
+                    rashi = 'Sinh';
+                }
+                else if ((boy_char[1] == 'o' || boy_char[1] == 'O')) {
+                    naksh1 = "poofa";
+                    rashi = 'Sinh';
+                }
+                else {
+                    naksh1 = "magha";
+                    rashi = 'Sinh';
+                }
+            }
+            else if ((boy_char[0] == 't' || boy_char[0] == 'T') && (boy_char[1] == 't' || boy_char[1] == 'T')) {
+                if ((boy_char[2] == 'A' || boy_char[2] == 'a')) {
+                    naksh1 = "poofa";
+                    rashi = 'Sinh';
+                }
+                else if ((boy_char[2] == 'i' || boy_char[2] == 'I')) {
+                    naksh1 = "poofa";
+                    rashi = 'Sinh';
+                }
+                else if ((boy_char[2] == 'e' || boy_char[2] == 'E') && (boy[3] == 'e' || boy[3] == 'E')) {
+                    naksh1 = "poofa";
+                    rashi = 'Sinh';
+                }
+                else if ((boy_char[2] == 'e' || boy_char[2] == 'E')) {
+                    naksh1 = "ufa1";
+                    rashi = 'Sinh';
+                }
+                else if ((boy_char[2] == 'u' || boy_char[2] == 'U')) {
+                    naksh1 = "poofa";
+                    rashi = 'Sinh';
+                }
+                else if ((boy_char[2] == 'o' || boy_char[2] == 'O') && (boy[3] == 'O' || boy[3] == 'o')) {
+                    naksh1 = "poofa";
+                    rashi = 'Sinh';
+                }
+                else if ((boy_char[2] == 'o' || boy_char[2] == 'O')) {
+                    naksh1 = "ufa1";
+                    rashi = 'Sinh';
+                }
+                else {
+                    naksh1 = "poofa";
+                    rashi = 'Sinh';
+                }
+            }
+            else if ((boy_char[0] == 'p' || boy_char[0] == 'P')) {
+                if ((boy_char[1] == 'A' || boy_char[1] == 'a')) {
+                    naksh1 = "ufa2";
+                    rashi = 'Kanya';
+                }
+                else if ((boy_char[1] == 'A' || boy_char[1] == 'a') && (boy_char[2] == 'A' || boy_char[2] == 'a')) {
+                    naksh1 = "ufa2";
+                    rashi = 'Kanya';
+                }
+                else if ((boy_char[1] == 'i' || boy_char[1] == 'I')) {
+                    naksh1 = "ufa2";
+                    rashi = 'Kanya';
+                }
+                else if ((boy_char[1] == 'e' || boy_char[1] == 'E') && (boy_char[2] == 'e' || boy_char[2] == 'E')) {
+                    naksh1 = "ufa2";
+                    rashi = 'Kanya';
+                }
+                else if ((boy_char[1] == 'e' || boy_char[1] == 'E')) {
+                    naksh1 = "chitra1";
+                    rashi = 'Kanya';
+                }
+                else if ((boy_char[1] == 'u' || boy_char[1] == 'U')) {
+                    naksh1 = "hast";
+                    rashi = 'Kanya';
+                }
+                else if ((boy_char[1] == 'o' || boy_char[1] == 'O') && (boy_char[2] == 'O' || boy_char[2] == 'o')) {
+                    naksh1 = "hast";
+                    rashi = 'Kanya';
+                }
+                else if ((boy_char[1] == 'o' || boy_char[1] == 'O')) {
+                    naksh1 = "chitra1";
+                    rashi = 'Kanya';
+                }
+                else {
+                    naksh1 = "ufa2";
+                    rashi = 'Kanya';
+                }
+            }
+
+            else if ((boy_char[0] == 'r' || boy_char[0] == 'R')) {
+                if ((boy_char[1] == 'A' || boy_char[1] == 'a')) {
+                    naksh1 = "chitra2";
+                    rashi = 'Tula';
+                }
+                else if ((boy_char[1] == 'A' || boy_char[1] == 'a') && (boy_char[2] == 'A' || boy_char[2] == 'a')) {
+                    naksh1 = "chitra2";
+                    rashi = 'Tula';
+                }
+                else if ((boy_char[1] == 'i' || boy_char[1] == 'I')) {
+                    naksh1 = "chitra2";
+                    rashi = 'Tula';
+                }
+                else if ((boy_char[1] == 'e' || boy_char[1] == 'E') && (boy_char[2] == 'e' || boy_char[2] == 'E')) {
+                    naksh1 = "chitra2";
+                    rashi = 'Tula';
+                }
+                else if ((boy_char[1] == 'e' || boy_char[1] == 'E')) {
+                    naksh1 = "swati";
+                    rashi = 'Tula';
+                }
+                else if ((boy_char[1] == 'u' || boy_char[1] == 'U')) {
+                    naksh1 = "swati";
+                    rashi = 'Tula';
+                }
+                else if ((boy_char[1] == 'o' || boy_char[1] == 'O') && (boy_char[2] == 'O' || boy_char[2] == 'o')) {
+                    naksh1 = "swati";
+                    rashi = 'Tula';
+                }
+                else if ((boy_char[1] == 'o' || boy_char[1] == 'O')) {
+                    naksh1 = "swati";
+                    rashi = 'Tula';
+                }
+                else {
+                    naksh1 = "chitra2";
+                    rashi = 'Tula';
+                }
+            }
+            else if ((boy_char[0] == 't' || boy_char[0] == 'T')) {
+                if ((boy_char[1] == 'A' || boy_char[1] == 'a')) {
+                    naksh1 = "swati";
+                    rashi = 'Tula';
+                }
+                else if ((boy_char[1] == 'A' || boy_char[1] == 'a') && (boy_char[2] == 'A' || boy_char[2] == 'a')) {
+                    naksh1 = "swati";
+                    rashi = 'Tula';
+                }
+                else if ((boy_char[1] == 'i' || boy_char[1] == 'I')) {
+                    naksh1 = "vishakha1";
+                    rashi = 'Tula';
+                }
+                else if ((boy_char[1] == 'e' || boy_char[1] == 'E') && (boy_char[2] == 'e' || boy_char[2] == 'E')) {
+                    naksh1 = "vishakha1";
+                    rashi = 'Tula';
+                }
+                else if ((boy_char[1] == 'e' || boy_char[1] == 'E')) {
+                    naksh1 = "vishakha2";
+                    rashi = 'Vraschik';
+                }
+                else if ((boy_char[1] == 'u' || boy_char[1] == 'U')) {
+                    naksh1 = "vishakha1";
+                    rashi = 'Tula';
+                }
+                else if ((boy_char[1] == 'o' || boy_char[1] == 'O') && (boy_char[2] == 'O' || boy_char[2] == 'o')) {
+                    naksh1 = "vishakha1";
+                    rashi = 'Tula';
+                }
+                else if ((boy_char[1] == 'o' || boy_char[1] == 'O')) {
+                    naksh1 = "vishakha2";
+                    rashi = 'Vraschik';
+                }
+                else {
+                    naksh1 = "swati";
+                    rashi = 'Tula';
+                }
+            }
+            else if ((boy_char[0] == 't' || boy_char[0] == 'T')) {
+                if ((boy_char[1] == 'A' || boy_char[1] == 'a')) {
+                    naksh1 = "swati";
+                    rashi = 'Tula';
+                }
+                else if ((boy_char[1] == 'A' || boy_char[1] == 'a') && (boy_char[2] == 'A' || boy_char[2] == 'a')) {
+                    naksh1 = "swati";
+                    rashi = 'Tula';
+                }
+                else if ((boy_char[1] == 'i' || boy_char[1] == 'I')) {
+                    naksh1 = "vishakha1";
+                    rashi = 'Tula';
+                }
+                else if ((boy_char[1] == 'e' || boy_char[1] == 'E') && (boy_char[2] == 'e' || boy_char[2] == 'E')) {
+                    naksh1 = "vishakha1";
+                    rashi = 'Tula';
+                }
+                else if ((boy_char[1] == 'e' || boy_char[1] == 'E')) {
+                    naksh1 = "vishakha2";
+                    rashi = 'Vraschik';
+                }
+                else if ((boy_char[1] == 'u' || boy_char[1] == 'U')) {
+                    naksh1 = "vishakha1";
+                    rashi = 'Tula';
+                }
+                else if ((boy_char[1] == 'o' || boy_char[1] == 'O') && (boy_char[2] == 'O' || boy_char[2] == 'o')) {
+                    naksh1 = "vishakha1";
+                    rashi = 'Tula';
+                }
+                else if ((boy_char[1] == 'o' || boy_char[1] == 'O')) {
+                    naksh1 = "vishakha2";
+                    rashi = 'Vraschik';
+                }
+                else {
+                    naksh1 = "swati";
+                    rashi = 'Tula';
+                }
+            }
+            else if ((boy_char[0] == 'n' || boy_char[0] == 'N')) {
+                if ((boy_char[1] == 'A' || boy_char[1] == 'a') && (boy_char[2] == 'A' || boy_char[2] == 'a')) {
+                    naksh1 = "anu";
+                    rashi = 'Vraschik';
+                }
+                else if ((boy_char[1] == 'A' || boy_char[1] == 'a')) {
+                    naksh1 = "anu";
+                    rashi = 'Vraschik';
+                }
+                else if ((boy_char[1] == 'i' || boy_char[1] == 'I')) {
+                    naksh1 = "anu";
+                    rashi = 'Vraschik';
+                }
+                else if ((boy_char[1] == 'e' || boy_char[1] == 'E') && (boy_char[2] == 'e' || boy_char[2] == 'E')) {
+                    naksh1 = "anu";
+                    rashi = 'Vraschik';
+                }
+                else if ((boy_char[1] == 'e' || boy_char[1] == 'E')) {
+                    naksh1 = "anu";
+                    rashi = 'Vraschik';
+                }
+                else if ((boy_char[1] == 'u' || boy_char[1] == 'U')) {
+                    naksh1 = "anu";
+                    rashi = 'Vraschik';
+                }
+                else if ((boy_char[1] == 'o' || boy_char[1] == 'O') && (boy_char[2] == 'O' || boy_char[2] == 'o')) {
+                    naksh1 = "anu";
+                    rashi = 'Vraschik';
+                }
+                else if ((boy_char[1] == 'o' || boy_char[1] == 'O')) {
+                    naksh1 = "jest";
+                    rashi = 'Vraschik';
+                }
+                else {
+                    naksh1 = "anu";
+                    rashi = 'Vraschik';
+                }
+            }
+            else if ((boy_char[0] == 'y' || boy_char[0] == 'Y')) {
+                if ((boy_char[1] == 'A' || boy_char[1] == 'a') && (boy_char[2] == 'A' || boy_char[2] == 'a')) {
+                    naksh1 = "jest";
+                    rashi = 'Vraschik';
+                }
+                else if ((boy_char[1] == 'A' || boy_char[1] == 'a')) {
+                    naksh1 = "jest";
+                    rashi = 'Vraschik';
+                }
+                else if ((boy_char[1] == 'i' || boy_char[1] == 'I')) {
+                    naksh1 = "jest";
+                    rashi = 'Vraschik';
+                }
+                else if ((boy_char[1] == 'e' || boy_char[1] == 'E') && (boy_char[2] == 'e' || boy_char[2] == 'E')) {
+                    naksh1 = "jest";
+                    rashi = 'Vraschik';
+                }
+                else if ((boy_char[1] == 'e' || boy_char[1] == 'E')) {
+                    naksh1 = "mool";
+                    rashi = 'Dhanu';
+                }
+                else if ((boy_char[1] == 'u' || boy_char[1] == 'U')) {
+                    naksh1 = "jest";
+                    rashi = 'Vraschik';
+                }
+                else if ((boy_char[1] == 'o' || boy_char[1] == 'O') && (boy_char[2] == 'O' || boy_char[2] == 'o')) {
+                    naksh1 = "jest";
+                    rashi = 'Vraschik';
+                }
+                else if ((boy_char[1] == 'o' || boy_char[1] == 'O')) {
+                    naksh1 = "mool";
+                    rashi = 'Dhanu';
+                }
+                else {
+                    naksh1 = "jest";
+                    rashi = 'Vraschik';
+                }
+            }
+            else if ((boy_char[0] == 'f' || boy_char[0] == 'F')) {
+                naksh1 = "poosha";
+                rashi = 'Dhanu';
+            }
+            else if ((boy_char[0] == 'g' || boy_char[0] == 'G')) {
+                if ((boy_char[1] == 'A' || boy_char[1] == 'a') && (boy_char[2] == 'A' || boy_char[2] == 'a')) {
+                    naksh1 = "dhanist1";
+                    rashi = 'Makar';
+                }
+                else if ((boy_char[1] == 'A' || boy_char[1] == 'a')) {
+                    naksh1 = "dhanist1";
+                    rashi = 'Makar';
+                }
+                else if ((boy_char[1] == 'i' || boy_char[1] == 'I')) {
+                    naksh1 = "dhanist1";
+                    rashi = 'Makar';
+                }
+                else if ((boy_char[1] == 'e' || boy_char[1] == 'E') && (boy_char[2] == 'e' || boy_char[2] == 'E')) {
+                    naksh1 = "dhanist1";
+                    rashi = 'Makar';
+                }
+                else if ((boy_char[1] == 'e' || boy_char[1] == 'E')) {
+                    naksh1 = "dhanist2";
+                    rashi = 'Kumbha';
+                }
+                else if ((boy_char[1] == 'u' || boy_char[1] == 'U')) {
+                    naksh1 = "dhanist2";
+                    rashi = 'Kumbha';
+                }
+                else if ((boy_char[1] == 'o' || boy_char[1] == 'O') && (boy_char[2] == 'O' || boy_char[2] == 'o')) {
+                    naksh1 = "dhanist2";
+                    rashi = 'Kumbha';
+                }
+                else if ((boy_char[1] == 'o' || boy_char[1] == 'O')) {
+                    naksh1 = "sat";
+                    rashi = 'Kumbha';
+                }
+                else {
+                    naksh1 = "dhanist1";
+                    rashi = 'Makar';
+                }
+            }
+            else if ((boy_char[0] == 'j' || boy_char[0] == 'J')) {
+                if ((boy_char[1] == 'A' || boy_char[1] == 'a') && (boy_char[2] == 'A' || boy_char[2] == 'a')) {
+                    naksh1 = "usa2";
+                    rashi = 'Makar';
+                }
+                else if ((boy_char[1] == 'A' || boy_char[1] == 'a')) {
+                    naksh1 = "usa2";
+                    rashi = 'Makar';
+                }
+                else if ((boy_char[1] == 'i' || boy_char[1] == 'I')) {
+                    naksh1 = "usa2";
+                    rashi = 'Makar';
+                }
+                else if ((boy_char[1] == 'e' || boy_char[1] == 'E') && (boy_char[2] == 'e' || boy_char[2] == 'E')) {
+                    naksh1 = "usa2";
+                    rashi = 'Makar';
+                }
+                else {
+                    naksh1 = "usa2";
+                    rashi = 'Makar';
+                }
+            }
+
+            else if ((boy_char[0] == 's' || boy_char[0] == 'S')) {
+                if (boy_char[1] == 'h' || boy_char[1] == 'H') {
+                    if ((boy_char[2] == 'A' || boy_char[2] == 'a') && (boy_char[3] == 'A' || boy_char[3] == 'a')) {
+                        naksh1 = "sat";
+                        rashi = 'Kumbha';
+                    }
+                    else if ((boy_char[2] == 'A' || boy_char[2] == 'a')) {
+                        naksh1 = "sat";
+                        rashi = 'Kumbha';
+                    }
+                    else if ((boy_char[2] == 'i' || boy_char[2] == 'I')) {
+                        naksh1 = "sat";
+                        rashi = 'Kumbha';
+                    }
+                    else if ((boy_char[2] == 'e' || boy_char[2] == 'E') && (boy[3] == 'e' || boy[3] == 'E')) {
+                        naksh1 = "sat";
+                        rashi = 'Kumbha';
+                    }
+                    else if ((boy_char[2] == 'e' || boy_char[2] == 'E')) {
+                        naksh1 = "pubha1";
+                        rashi = 'Kumbha';
+                    }
+                    else if ((boy_char[2] == 'u' || boy_char[2] == 'U')) {
+                        naksh1 = "sat";
+                        rashi = 'Kumbha';
+                    }
+                    else if ((boy_char[2] == 'o' || boy_char[2] == 'O') && (boy[3] == 'O' || boy[3] == 'o')) {
+                        naksh1 = "sat";
+                        rashi = 'Kumbha';
+                    }
+                    else if ((boy_char[2] == 'o' || boy_char[2] == 'O')) {
+                        naksh1 = "pubha1";
+                        rashi = 'Kumbha';
+                    }
+                    else {
+                        naksh1 = "sat";
+                        rashi = 'Kumbha';
+                    }
+
+                }
+                else {
+                    if ((boy_char[1] == 'A' || boy_char[1] == 'a') && (boy_char[2] == 'A' || boy_char[2] == 'a')) {
+                        naksh1 = "sat";
+                        rashi = 'Kumbha';
+                    }
+                    else if ((boy_char[1] == 'A' || boy_char[1] == 'a')) {
+                        naksh1 = "sat";
+                        rashi = 'Kumbha';
+                    }
+                    else if ((boy_char[1] == 'i' || boy_char[1] == 'I')) {
+                        naksh1 = "sat";
+                        rashi = 'Kumbha';
+                    }
+                    else if ((boy_char[1] == 'e' || boy_char[1] == 'E') && (boy[2] == 'e' || boy[2] == 'E')) {
+                        naksh1 = "sat";
+                        rashi = 'Kumbha';
+                    }
+                    else if ((boy_char[1] == 'e' || boy_char[1] == 'E')) {
+                        naksh1 = "pubha1";
+                        rashi = 'Kumbha';
+                    }
+                    else if ((boy_char[1] == 'u' || boy_char[1] == 'U')) {
+                        naksh1 = "sat";
+                        rashi = 'Kumbha';
+                    }
+                    else if ((boy_char[1] == 'o' || boy_char[1] == 'O') && (boy[2] == 'O' || boy[2] == 'o')) {
+                        naksh1 = "sat";
+                        rashi = 'Kumbha';
+                    }
+                    else if ((boy_char[1] == 'o' || boy_char[1] == 'O')) {
+                        naksh1 = "pubha1";
+                        rashi = 'Kumbha';
+                    }
+                    else {
+                        naksh1 = "sat";
+                        rashi = 'Kumbha';
+                    }
+                }
             
         }
-    }
-    for (i = 0; i < 26; i++) {
-        if (arr[i] == result2) {
-            n2 = i;
-            
-            break;
-            
-        }
-    }
-    
-    result =gunn[n2][n1];
-    
+        tot = [rashi, naksh1];
+        return tot;
 
-    return result;
-}
+        }
+        function Gun(result1, result2) {
+            var n1 = 0, n2 = 0, i = 0;
+            var result = 0;
+            let arr = ['asv', 'bhardi', 'kratika1', 'kratika2', 'rohdi', 'mrug1', 'mrug2',
+                'adra', 'pun1', 'pun2', 'pusya', 'asle', 'magha', 'poofa', 'ufa1', 'ufa2',
+                'hast', 'chitra1', 'chitra2', 'swati', 'vishakha1', 'vishakha2', 'anu', 'jest', 'mool', 'poosha',
+                'usha1', 'usha2', 'sravan', 'danist1', 'danist2', 'sat', 'pubha1', 'pubha2', 'ubha', 'revti'];
+
+            gunn = [[28, 33, 28, 18, 21, 22, 26, 17, 18, 22, 31, 27, 21, 26, 16, 11, 9, 13, 22, 26, 22, 19, 26, 15, 13, 26, 24, 26, 26, 21, 21, 15, 16, 14, 24, 26],
+            [34, 28, 29, 19, 22, 14, 18, 26, 26, 30, 23, 24, 20, 18, 26, 21, 20, 5, 14, 29, 22, 19, 17, 19, 20, 19, 27, 28, 27, 10, 10, 20, 24, 22, 17, 28],
+            [27, 29, 28, 20, 10, 18, 22, 20, 22, 16, 27, 23, 16, 19, 20, 15, 16, 18, 27, 16, 19, 16, 21, 26, 24, 18, 14, 15, 12, 25, 25, 27, 19, 17, 19, 12],
+            [18, 20, 19, 28, 21, 26, 19, 17, 18, 22, 24, 20, 18, 21, 22, 29, 29, 23, 22, 11, 14, 21, 26, 31, 20, 13, 9, 14, 11, 23, 29, 31, 23, 20, 22, 14],
+            [23, 23, 10, 19, 28, 36, 27, 23, 23, 27, 27, 13, 12, 26, 27, 25, 26, 20, 19, 15, 9, 16, 30, 24, 14, 20, 11, 16, 18, 20, 26, 24, 30, 27, 27, 19],
+            [23, 14, 18, 27, 35, 28, 16, 24, 23, 27, 20, 22, 20, 15, 25, 23, 26, 13, 12, 25, 17, 23, 22, 25, 15, 11, 17, 21, 26, 12, 19, 27, 29, 26, 17, 27],
+            [27, 18, 22, 18, 27, 20, 28, 33, 31, 19, 12, 15, 23, 20, 27, 30, 34, 21, 14, 27, 20, 14, 12, 14, 23, 19, 25, 21, 26, 13, 14, 22, 24, 26, 17, 27],
+            [19, 27, 21, 18, 24, 26, 34, 28, 25, 13, 20, 13, 22, 28, 21, 24, 24, 27, 20, 27, 20, 13, 17, 3, 13, 28, 28, 23, 23, 18, 19, 12, 17, 19, 27, 27],
+            [19, 26, 23, 20, 23, 24, 32, 24, 28, 13, 23, 17, 22, 23, 20, 23, 24, 26, 19, 27, 21, 14, 20, 6, 14, 27, 27, 22, 23, 18, 19, 11, 17, 19, 27, 28],
+            [21, 28, 23, 22, 25, 26, 19, 10, 14, 28, 35, 28, 16, 20, 14, 17, 16, 20, 16, 27, 21, 20, 26, 11, 8, 21, 21, 26, 27, 22, 12, 7, 11, 17, 25, 25],
+            [30, 21, 26, 23, 25, 18, 12, 18, 21, 35, 28, 30, 18, 14, 23, 26, 27, 12, 11, 26, 21, 20, 19, 22, 17, 11, 22, 27, 25, 13, 4, 14, 18, 24, 18, 27],
+            [26, 26, 22, 19, 12, 21, 14, 12, 16, 28, 30, 28, 15, 15, 17, 20, 20, 25, 24, 11, 16, 15, 20, 26, 22, 16, 7, 12, 12, 27, 18, 18, 12, 18, 20, 13],
+            [21, 19, 17, 17, 9, 18, 22, 21, 21, 16, 18, 16, 28, 30, 26, 15, 16, 21, 24, 11, 16, 22, 25, 32, 24, 20, 9, 5, 6, 18, 23, 24, 17, 19, 19, 12],
+            [26, 18, 20, 21, 23, 15, 19, 27, 26, 23, 18, 17, 30, 28, 34, 23, 29, 7, 10, 24, 18, 24, 22, 24, 18, 17, 25, 21, 19, 4, 9, 19, 23, 24, 17, 25],
+            [17, 25, 20, 21, 25, 23, 27, 20, 20, 17, 26, 19, 26, 34, 28, 18, 16, 13, 16, 25, 16, 22, 31, 17, 9, 25, 26, 22, 21, 12, 17, 19, 15, 16, 27, 24],
+            [13, 21, 16, 21, 25, 23, 30, 23, 23, 19, 28, 21, 17, 25, 19, 28, 27, 24, 16, 25, 16, 18, 28, 13, 14, 29, 30, 26, 25, 16, 16, 10, 14, 18, 29, 27],
+            [11, 20, 17, 22, 25, 26, 33, 22, 23, 19, 28, 22, 17, 21, 16, 26, 28, 28, 20, 26, 18, 20, 26, 14, 15, 27, 28, 24, 25, 21, 21, 6, 15, 18, 27, 28],
+            [14, 6, 19, 24, 20, 13, 20, 26, 25, 21, 13, 26, 22, 8, 14, 24, 28, 28, 20, 20, 26, 28, 12, 25, 27, 13, 22, 17, 19, 17, 19, 24, 17, 21, 11, 22],
+            [23, 15, 28, 23, 20, 13, 14, 20, 19, 21, 13, 26, 25, 11, 17, 17, 21, 21, 28, 28, 34, 24, 7, 22, 27, 13, 22, 25, 27, 25, 19, 26, 19, 14, 4, 15],
+            [28, 29, 17, 12, 15, 26, 27, 26, 27, 28, 28, 14, 12, 24, 25, 25, 27, 21, 28, 28, 20, 10, 22, 17, 23, 27, 19, 22, 23, 29, 23, 21, 27, 21, 20, 13],
+            [22, 23, 20, 15, 10, 19, 20, 20, 21, 22, 22, 18, 17, 19, 17, 17, 19, 27, 34, 20, 28, 18, 17, 20, 27, 21, 14, 17, 17, 31, 25, 26, 21, 15, 13, 7],
+            [17, 17, 14, 19, 14, 23, 13, 13, 13, 19, 19, 14, 21, 23, 21, 18, 19, 28, 22, 8, 17, 28, 28, 31, 21, 15, 9, 12, 12, 26, 25, 25, 20, 20, 18, 11],
+            [24, 14, 19, 24, 27, 20, 11, 16, 20, 25, 18, 20, 24, 20, 29, 26, 26, 12, 7, 21, 17, 28, 28, 31, 16, 13, 22, 25, 26, 13, 13, 21, 26, 25, 18, 26],
+            [13, 17, 24, 29, 22, 23, 13, 3, 5, 10, 21, 25, 31, 23, 16, 13, 12, 25, 19, 15, 20, 31, 31, 28, 15, 16, 17, 20, 21, 26, 26, 19, 12, 10, 21, 21],
+            [12, 20, 24, 19, 13, 14, 22, 15, 13, 9, 18, 24, 25, 18, 9, 13, 13, 26, 26, 22, 26, 23, 13, 15, 28, 28, 26, 15, 16, 20, 28, 21, 14, 16, 25, 28],
+            [26, 19, 18, 12, 19, 11, 19, 27, 27, 23, 13, 17, 19, 17, 25, 28, 27, 12, 12, 27, 20, 16, 16, 18, 28, 28, 34, 23, 24, 8, 16, 23, 30, 32, 23, 32],
+            [25, 27, 14, 8, 11, 18, 25, 27, 27, 23, 24, 9, 9, 25, 29, 28, 21, 21, 16, 13, 10, 24, 18, 26, 34, 28, 18, 16, 15, 23, 23, 29, 31, 32, 23],
+            [28, 29, 16, 13, 17, 22, 20, 22, 22, 28, 28, 14, 5, 21, 22, 25, 25, 17, 24, 16, 13, 28, 23, 16, 25, 19, 28, 26, 26, 17, 17, 23, 30, 31, 22],
+            [27, 27, 13, 11, 17, 26, 23, 21, 22, 28, 26, 15, 6, 18, 20, 23, 24, 18, 25, 22, 16, 14, 28, 23, 17, 23, 16, 25, 28, 30, 20, 18, 23, 31, 30, 22],
+            [21, 10, 26, 23, 20, 13, 9, 16, 17, 23, 15, 28, 18, 4, 12, 16, 20, 16, 23, 27, 30, 28, 15, 28, 21, 9, 16, 26, 30, 28, 18, 23, 19, 26, 15, 22],
+            [21, 11, 26, 30, 27, 20, 13, 19, 19, 15, 5, 20, 24, 10, 18, 17, 21, 18, 19, 23, 25, 26, 13, 26, 29, 17, 24, 18, 22, 20, 28, 33, 28, 18, 7, 15],
+            [16, 21, 28, 32, 25, 28, 21, 12, 13, 8, 15, 20, 25, 19, 12, 11, 10, 25, 26, 21, 26, 27, 22, 19, 22, 24, 24, 18, 19, 25, 33, 28, 19, 8, 17, 17],
+            [18, 25, 20, 24, 31, 31, 24, 17, 18, 13, 21, 14, 18, 24, 16, 15, 17, 18, 19, 28, 21, 21, 27, 12, 15, 31, 30, 24, 25, 20, 28, 19, 28, 18, 23, 20],
+            [14, 21, 16, 19, 26, 26, 25, 18, 19, 18, 26, 18, 16, 22, 14, 16, 18, 19, 12, 21, 14, 21, 27, 11, 15, 31, 30, 29, 30, 25, 17, 7, 16, 28, 33, 30],
+            [24, 15, 18, 21, 25, 17, 16, 25, 27, 26, 19, 20, 17, 15, 25, 27, 26, 9, 2, 19, 12, 19, 20, 22, 24, 22, 31, 30, 29, 14, 6, 16, 21, 33, 28, 34],
+            [25, 24, 11, 14, 17, 26, 25, 24, 25, 24, 27, 13, 12, 22, 23, 25, 26, 20, 13, 11, 5, 12, 27, 22, 26, 30, 21, 20, 22, 22, 14, 16, 18, 29, 34, 28]
+            ];
+
+            for (i = 0; i < 26; i++) {
+                if (arr[i] == result1) {
+                    n1 = i;
+
+                    break;
+
+                }
+            }
+            for (i = 0; i < 26; i++) {
+                if (arr[i] == result2) {
+                    n2 = i;
+
+                    break;
+
+                }
+            }
+
+            result = gunn[n2][n1];
+
+
+            return result;
+        }
+
 
     </script>
 
