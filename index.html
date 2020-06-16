@@ -401,6 +401,11 @@ function cal(naksh1, boy, boy_char) {
         }
 
     }
+    else if ((boy_char[0] == 'c' || boy_char[0] == 'C') && (boy_char[1] == 'h' || boy_char[1] == 'H')) {
+        if ((boy_char[2] == 'r' || boy_char[2] == 'R')) {
+            naksh1 = "revti";
+            rashi = 'meen';
+        }
     else if ((boy_char[0] == 'b' || boy_char[0] == 'B') && (boy_char[1] == 'h' || boy_char[1] == 'H')) {
         if ((boy_char[2] == 'a' || boy_char[2] == 'A')) {
             naksh1 = "mool";
@@ -430,6 +435,11 @@ function cal(naksh1, boy, boy_char) {
             naksh1 = "usha1";
             rashi = 'Dhanu';
         }
+        else {
+            naksh1 = "mool";
+            rashi = 'Dhanu';
+        }
+        
 
 
     }
@@ -485,6 +495,12 @@ function cal(naksh1, boy, boy_char) {
         else if ((boy_char[1] == 'u' || boy_char[1] == 'U')) {
             naksh1 = "bhardi";
             rashi = 'Mesh';
+        
+        }
+        else 
+        {
+            naksh1 = "asv";
+            rashi = 'Mesh';
         }
 
     }
@@ -517,6 +533,10 @@ function cal(naksh1, boy, boy_char) {
             naksh1 = "bhardi";
             rashi = 'Mesh';
         }
+        else{
+            naksh1 = "rohdi";
+            rashi = 'Vrash';
+        }
 
     }
     else if ((boy_char[0] == 'o' || boy_char[0] == 'O')) {
@@ -542,6 +562,32 @@ function cal(naksh1, boy, boy_char) {
     else if ((boy_char[0] == 'e' || boy_char[0] == 'E')) {
         naksh1 = "kratika2";
         rashi = 'Vrash';
+    }
+    else if ((boy_char[0] == 'K' || boy_char[0] == 'k') && (boy_char[1] == 'h' || boy_char[1] == 'H')) {
+        if ((boy_char[2] == 'i' || boy_char[2] == 'I')) {
+            naksh1 = "sravan";
+            rashi = 'Makar';
+        }
+        else if ((boy_char[2] == 'e' || boy_char[2] == 'E') && (boy[3] == 'e' || boy[3] == 'E')) {
+            naksh1 = "sravan";
+            rashi = 'Makar';
+        }
+        else if ((boy_char[2] == 'e' || boy_char[2] == 'E')) {
+            naksh1 = "sravan";
+            rashi = 'Makar';
+        }
+        else if ((boy_char[2] == 'u' || boy_char[2] == 'U')) {
+            naksh1 = "sravan";
+            rashi = 'Makar';
+        }
+        else if ((boy_char[2] == 'o' || boy_char[2] == 'O') && (boy_char[3] == 'O' || boy_char[3] == 'o')) {
+            naksh1 = "sravan";
+            rashi = 'Makar';
+        }
+        else if ((boy_char[2] == 'o' || boy_char[2] == 'O')) {
+            naksh1 = "sravan";
+            rashi = 'Makar';
+        }
     }
     else if ((boy_char[0] == 'c' || boy_char[0] == 'C') || (boy_char[0] == 'k' || boy_char[0] == 'K')) {
         if ((boy_char[1] == 'a' || boy_char[1] == 'A')) {
@@ -574,6 +620,11 @@ function cal(naksh1, boy, boy_char) {
         }
         else if ((boy_char[1] == 'o' || boy_char[1] == 'O')) {
             naksh1 = "pun1";
+            rashi = 'Mithun';
+
+        }
+        else{
+            naksh1 = "mrug2";
             rashi = 'Mithun';
         }
 
@@ -613,6 +664,10 @@ function cal(naksh1, boy, boy_char) {
             naksh1 = "pusya";
             rashi = 'Kark';
         }
+        else{
+            naksh1 = "pun2";
+            rashi = 'Kark';
+        }
 
     }
     else if ((boy_char[0] == 'd' || boy_char[0] == 'D')) {
@@ -643,6 +698,10 @@ function cal(naksh1, boy, boy_char) {
         }
         else if ((boy_char[1] == 'o' || boy_char[1] == 'O')) {
             naksh1 = "revti";
+            rashi = 'Meen';
+        }
+        else{
+            naksh1 = "pubha2";
             rashi = 'Meen';
         }
 
@@ -676,6 +735,10 @@ function cal(naksh1, boy, boy_char) {
             naksh1 = "poofa";
             rashi = 'Sinh';
         }
+        else{
+            naksh1 = "magha";
+            rashi = 'Sinh';
+        }
     }
     else if ((boy_char[0] == 't' || boy_char[0] == 'T') && (boy_char[1] == 't' || boy_char[1] == 'T')) {
         if ((boy_char[2] == 'A' || boy_char[2] == 'a')) {
@@ -704,6 +767,10 @@ function cal(naksh1, boy, boy_char) {
         }
         else if ((boy_char[2] == 'o' || boy_char[2] == 'O')) {
             naksh1 = "ufa1";
+            rashi = 'Sinh';
+        }
+        else{
+            naksh1 = "poofa";
             rashi = 'Sinh';
         }
     }
@@ -738,6 +805,10 @@ function cal(naksh1, boy, boy_char) {
         }
         else if ((boy_char[1] == 'o' || boy_char[1] == 'O')) {
             naksh1 = "chitra1";
+            rashi = 'Kanya';
+        }
+        else{
+            naksh1 = "ufa2";
             rashi = 'Kanya';
         }
     }
@@ -775,6 +846,10 @@ function cal(naksh1, boy, boy_char) {
             naksh1 = "swati";
             rashi = 'Tula';
         }
+        else{
+            naksh1 = "chitra2";
+            rashi = 'Tula';
+        }
     }
     else if ((boy_char[0] == 't' || boy_char[0] == 'T')) {
         if ((boy_char[1] == 'A' || boy_char[1] == 'a')) {
@@ -809,6 +884,10 @@ function cal(naksh1, boy, boy_char) {
             naksh1 = "vishakha2";
             rashi = 'Vraschik';
         }
+        else{
+            naksh1 = "swati";
+            rashi = 'Tula';
+        }
     }
     else if ((boy_char[0] == 't' || boy_char[0] == 'T')) {
         if ((boy_char[1] == 'A' || boy_char[1] == 'a')) {
@@ -842,6 +921,10 @@ function cal(naksh1, boy, boy_char) {
         else if ((boy_char[1] == 'o' || boy_char[1] == 'O')) {
             naksh1 = "vishakha2";
             rashi = 'Vraschik';
+        }
+        else{
+            naksh1 = "swati";
+            rashi = 'Tula';
         }
     }
     else if ((boy_char[0] == 'n' || boy_char[0] == 'N')) {
@@ -877,6 +960,10 @@ function cal(naksh1, boy, boy_char) {
             naksh1 = "jest";
             rashi = 'Vraschik';
         }
+        else{
+            naksh1 = "anu";
+            rashi = 'Vraschik';
+        }
     }
     else if ((boy_char[0] == 'y' || boy_char[0] == 'Y')) {
         if ((boy_char[1] == 'A' || boy_char[1] == 'a') && (boy_char[2] == 'A' || boy_char[2] == 'a')) {
@@ -910,6 +997,10 @@ function cal(naksh1, boy, boy_char) {
         else if ((boy_char[1] == 'o' || boy_char[1] == 'O')) {
             naksh1 = "mool";
             rashi = 'Dhanu';
+        }
+        else{
+            naksh1 = "jest";
+            rashi = 'Vraschik';
         }
     }
     else if ((boy_char[0] == 'f' || boy_char[0] == 'F')) {
@@ -949,6 +1040,10 @@ function cal(naksh1, boy, boy_char) {
             naksh1 = "sat";
             rashi = 'Kumbha';
         }
+        else{
+            naksh1 = "dhanist1";
+            rashi = 'Makar';
+        }
     }
     else if ((boy_char[0] == 'j' || boy_char[0] == 'J')) {
         if ((boy_char[1] == 'A' || boy_char[1] == 'a') && (boy_char[2] == 'A' || boy_char[2] == 'a')) {
@@ -967,33 +1062,12 @@ function cal(naksh1, boy, boy_char) {
             naksh1 = "usa2";
             rashi = 'Makar';
         }
-    }
-    else if ((boy_char[0] == 'K' || boy_char[0] == 'k') && (boy_char[1] == 'h' || boy_char[1] == 'H')) {
-        if ((boy_char[2] == 'i' || boy_char[2] == 'I')) {
-            naksh1 = "sravan";
-            rashi = 'Makar';
-        }
-        else if ((boy_char[2] == 'e' || boy_char[2] == 'E') && (boy[3] == 'e' || boy[3] == 'E')) {
-            naksh1 = "sravan";
-            rashi = 'Makar';
-        }
-        else if ((boy_char[2] == 'e' || boy_char[2] == 'E')) {
-            naksh1 = "sravan";
-            rashi = 'Makar';
-        }
-        else if ((boy_char[2] == 'u' || boy_char[2] == 'U')) {
-            naksh1 = "sravan";
-            rashi = 'Makar';
-        }
-        else if ((boy_char[2] == 'o' || boy_char[2] == 'O') && (boy_char[3] == 'O' || boy_char[3] == 'o')) {
-            naksh1 = "sravan";
-            rashi = 'Makar';
-        }
-        else if ((boy_char[2] == 'o' || boy_char[2] == 'O')) {
-            naksh1 = "sravan";
+        else{
+            naksh1 = "usa2";
             rashi = 'Makar';
         }
     }
+    
     else if ((boy_char[0] == 's' || boy_char[0] == 'S')) {
         if (boy_char[1] == 'h' || boy_char[1] == 'H') {
             if ((boy_char[2] == 'A' || boy_char[2] == 'a') && (boy_char[3] == 'A' || boy_char[3] == 'a')) {
@@ -1026,6 +1100,10 @@ function cal(naksh1, boy, boy_char) {
             }
             else if ((boy_char[2] == 'o' || boy_char[2] == 'O')) {
                 naksh1 = "pubha1";
+                rashi = 'Kumbha';
+            }
+            else{
+                naksh1 = "sat";
                 rashi = 'Kumbha';
             }
 
@@ -1061,6 +1139,10 @@ function cal(naksh1, boy, boy_char) {
             }
             else if ((boy_char[1] == 'o' || boy_char[1] == 'O')) {
                 naksh1 = "pubha1";
+                rashi = 'Kumbha';
+            }
+            else{
+                naksh1 = "sat";
                 rashi = 'Kumbha';
             }
         }
