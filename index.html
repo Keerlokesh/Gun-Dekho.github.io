@@ -346,8 +346,8 @@ document.getElementById('contactForm').addEventListener('submit', Result);
 function Result(e) {
     e.preventDefault();
 
-    var naksh1 = "n1";
-    var naksh2 = "n2";
+    var naksh1 = "null";
+    var naksh2 = "null";
     var boy = document.querySelector('#boy1').value;
     var girl = document.querySelector('#girl1').value;
     var boy_char = boy[0] + boy[1] + boy[2];
@@ -357,6 +357,15 @@ function Result(e) {
     total1 = toString(boy);
     total2 = toString(girl);
 
+   if(boy < 1){
+    alert('Please Fill Boy Name');
+      return;
+   }
+   else if(girl < 1)
+           {
+     alert('Please Fill Girl Name');
+       return;
+           }
     var result1 = cal(naksh1, boy, boy_char);
     total1 = result1;
     var result2 = cal(naksh2, girl, girl_char);
